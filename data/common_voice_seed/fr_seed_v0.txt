@@ -1,0 +1,762 @@
+Bonjour, comment allez-vous ce matin ?
+Merci beaucoup pour votre aide.
+Excusez-moi de vous déranger.
+S'il vous plaît, parlez plus lentement.
+À demain, bonne journée.
+Bonsoir, avez-vous bien mangé ?
+Je m'appelle Salif et j'habite ici.
+Comment s'appelle votre enfant ?
+Où habite votre famille ?
+Il fait chaud aujourd'hui, restez à l'ombre.
+Passez le bonjour à votre mère.
+Je suis très content de vous voir.
+Repose-toi bien, à demain matin.
+Bienvenue chez nous, entrez donc.
+Prenez soin de vous et de votre famille.
+Bonjour, avez-vous bien dormi ?
+Comment se porte votre santé ce matin ?
+Comment vont les enfants à la maison ?
+Comment va le travail ces derniers jours ?
+Bonsoir, la fatigue est passée ?
+Je vous salue tous, la paix chez vous.
+Bonjour à toute la famille assemblée.
+Que Dieu vous garde en bonne santé.
+Bonne route et faites bon voyage.
+Le voyage s'est-il bien passé ?
+Je pars maintenant, à la prochaine.
+On se reverra bientôt, si Dieu le veut.
+Merci pour l'accueil chaleureux.
+Excusez le retard, la route était longue.
+Pardon, je n'avais pas vu votre appel.
+Ne vous fatiguez pas trop aujourd'hui.
+Prenez le temps de vous reposer.
+Que la journée vous soit favorable.
+Je vous laisse la paix chez vous.
+On se retrouve à la même heure demain.
+Sois patient, tout va bien se passer.
+Attention à toi sur la route.
+Je vous remercie du fond du cœur.
+Vous avez été très généreux avec moi.
+Que la nouvelle année vous porte chance.
+Bienvenue chez nous, mangez à votre faim.
+Passez la nuit en paix.
+La paix soit avec vous et votre maison.
+Je prie pour votre bonne santé.
+Que le voyage se passe sans problème.
+Bonne fête à toute votre famille.
+Reviens quand tu veux, tu es le bienvenu.
+Ne t'inquiète pas, tout ira bien.
+Prends courage, cela va passer.
+Félicitations pour la naissance du bébé.
+Toutes mes condoléances, courage à la famille.
+Que Dieu bénisse votre travail.
+Merci de m'avoir attendu si longtemps.
+Excusez-moi, j'ai les mains occupées.
+Pardon, pouvez-vous répéter la question ?
+Je n'ai pas bien entendu, parlez plus fort.
+Excusez-moi, je cherche mon chemin.
+Est-ce que vous parlez français aussi ?
+Puis-je vous poser une question, s'il vous plaît ?
+Merci beaucoup, je vous suis reconnaissant.
+Votre gentillesse me touche vraiment.
+J'espère vous revoir bientôt en bonne santé.
+Passe une bonne nuit et à demain.
+Fais de beaux rêves, mon enfant.
+Réveille-toi doucement, il est encore tôt.
+Le jour se lève, il faut se lever.
+Prenons le café ensemble ce matin.
+Comment se sont passées vos courses ?
+Vous êtes toujours le bienvenu chez nous.
+Merci pour l'invitation à la fête.
+J'accepte votre invitation avec plaisir.
+Je ne pourrai pas venir cette fois-ci.
+Ne vous dérangez pas pour moi.
+Servez-vous, il y en a assez pour tous.
+Prenez la meilleure place, je vous en prie.
+Asseyez-vous ici, à l'ombre du manguier.
+Reposez-vous un instant avant de repartir.
+Voulez-vous boire un verre d'eau fraîche ?
+Puis-je vous offrir quelque chose à manger ?
+La maison est petite mais le cœur est grand.
+Faites comme chez vous, s'il vous plaît.
+Excusez le désordre, nous n'attendions personne.
+On mangera ensemble ce soir chez nous.
+Ne pars pas encore, reste un peu.
+Merci d'être venu, cela nous a fait plaisir.
+On se souhaite tous bonne chance.
+Sois prudent en rentrant à la maison.
+Prends soin de toi, tu es fatigué.
+Comment se porte ta femme aujourd'hui ?
+Salue bien ton grand-père de ma part.
+Dis à ta mère que je passerai demain.
+Comment se sont passées les fêtes ?
+Que Dieu vous récompense pour votre bonté.
+Je m'excuse d'être arrivé sans prévenir.
+Ne t'en fais pas, tu es toujours le bienvenu.
+Reste manger avec nous ce midi.
+Merci, j'ai déjà mangé chez moi.
+Il faut que je parte, on m'attend.
+Je repasserai vous voir dans la semaine.
+Bonne continuation dans votre travail.
+Que la journée vous soit douce et calme.
+Souhaitez-lui prompt rétablissement de ma part.
+Mon père travaille dans les champs.
+Ma mère prépare le repas du soir.
+Mon petit frère va à l'école du village.
+Ma sœur aînée revient du marché.
+Grand-père raconte souvent des histoires anciennes.
+Notre voisin élève des chèvres et des poulets.
+Les enfants aident leurs parents chaque jour.
+Nous mangeons ensemble sous le manguier.
+La grand-mère berce le bébé.
+La famille se réunit tous les dimanches.
+Mon oncle vit dans la capitale.
+Ma tante nous rend visite chaque année.
+Les cousins viennent passer les vacances.
+Le bébé fait ses premiers pas.
+La petite fille sait déjà compter.
+Le grand frère aide au champ.
+Ma sœur cadette étudie à l'école primaire.
+Les grands-parents habitent tout près.
+Nous formons une grande famille unie.
+Les jeunes respectent toujours les anciens.
+Les mariés reçoivent la bénédiction des parents.
+Le bébé pleure parce qu'il a faim.
+Les jumeaux se ressemblent beaucoup.
+Ma belle-mère cuisine très bien.
+Mon beau-père est un homme respecté.
+Les petits jouent devant la cour.
+La maman lave son bébé chaque matin.
+Les grands frères apprennent le métier à leurs cadets.
+Notre famille compte plusieurs générations.
+Le père enseigne le respect à ses enfants.
+La mère encourage ses filles à étudier.
+Les femmes s'entraident dans le quartier.
+Les hommes se rassemblent le soir.
+Les enfants écoutent les conseils des anciens.
+Le chef de famille prend les grandes décisions.
+La grand-mère connaît beaucoup de plantes médicinales.
+Nous célébrons la naissance avec toute la famille.
+La cérémonie de baptême a lieu ce week-end.
+Les invités viennent de plusieurs villages.
+Le griot chante les louanges de la famille.
+Les cadeaux sont partagés entre tous.
+La cousine se marie à la fin de l'année.
+Le fiancé apporte la dot à la famille.
+Les mariés dansent devant la foule.
+Les enfants aiment jouer avec leurs cousins.
+Ma nièce vient d'entrer au collège.
+Mon neveu apprend à conduire.
+Les jeunes filles préparent la sauce ensemble.
+Les jeunes garçons vont chercher le bois.
+Le vieux sage nous a quittés hier soir.
+Les funérailles auront lieu demain matin.
+La famille du défunt reçoit du soutien.
+Les voisins apportent leur nourriture partagée.
+Chaque membre de la famille a sa tâche.
+Les orphelins sont accueillis par la famille élargie.
+Le repas est prêt, venez manger.
+Passe-moi le sel, s'il te plaît.
+Elle prépare le tô avec de la sauce gombo.
+Ce plat est très savoureux, j'en veux encore.
+L'eau du puits est fraîche.
+Nous buvons de la bouillie chaque matin.
+Le riz est cuit, il faut servir.
+Achète du poisson séché au marché.
+Le pain sort du four à sept heures.
+Le lait de la vache est bon pour les enfants.
+La sauce est encore trop chaude.
+Attention, le plat brûle les doigts.
+Le tô se mange avec la main droite.
+La bouillie de mil est très nourrissante.
+Le riz gras est mon plat préféré.
+Le poisson grillé sent délicieusement bon.
+Les brochettes de mouton sont bien épicées.
+Le lait caillé rafraîchit pendant la chaleur.
+Le dèguè est parfait après le repas.
+Le zoom-koom est excellent quand il fait chaud.
+La sauce arachide accompagne bien le riz.
+Le beignet chaud est un bon goûter.
+Les enfants adorent les fruits mûrs.
+La mangue de saison est très sucrée.
+Nous partageons les bananes après le déjeuner.
+Le pain frais coûte moins cher le matin.
+La marmite est encore sur le feu.
+Le feu de bois cuit doucement les aliments.
+Le charbon dure plus longtemps que le bois.
+Prépare le thé pendant que je m'assois.
+Le thé se boit en trois verres traditionnels.
+La théière est déjà sur les braises.
+Verse-moi un peu de sauce sur le riz.
+Ajoute un peu de sel dans la marmite.
+Le piment relève bien le goût du plat.
+Coupe l'oignon en tranches fines.
+Écrase les tomates avant de les mettre.
+Fais bouillir l'eau avant de la boire.
+Range la vaisselle propre dans le placard.
+Lave les casseroles avec du savon.
+Le seau est plein, il faut le vider.
+Nettoie la table après le repas.
+Balaie la cuisine chaque soir avant de dormir.
+Range les provisions dans un endroit frais.
+Cache le sucre pour que les fourmis n'y entrent pas.
+Attention, la marmite est encore chaude.
+N'ouvre pas le couvercle maintenant.
+Le repas doit reposer avant d'être servi.
+Prépare la table pour les invités.
+Sers d'abord les plus âgés à table.
+On mange en silence pour respecter la nourriture.
+Ce plat a été préparé avec beaucoup d'amour.
+Combien coûte ce panier de tomates ?
+Le marché ouvre tôt le matin.
+Cherche des oignons frais chez cette vendeuse.
+Vends-moi trois mesures de mil.
+Le tissu bleu est très joli.
+La marchande a baissé son prix.
+On négocie toujours avant d'acheter.
+Prépare de la monnaie pour le transport.
+Ce mouton est trop cher pour moi.
+Rentrons à la maison, il se fait tard.
+Le poisson frais coûte cent francs le tas.
+Les mangues sont moins chères en pleine saison.
+Achète aussi du sel et du sucre.
+Le vendeur de piments est là-bas au coin.
+La bonne huile se trouve au fond du marché.
+Le petit commerce marche bien ce mois-ci.
+Le grand marché a lieu tous les mercredis.
+Il faut arriver tôt pour trouver les meilleurs produits.
+Le marché est fermé demain à cause de la fête.
+Le prix a beaucoup augmenté cette année.
+La commerçante fait un bon rabais aux fidèles clients.
+Prête-moi cent francs pour compléter la somme.
+Je te rends l'argent la semaine prochaine.
+Cache bien ton porte-monnaie dans le sac.
+Attention aux pickpockets dans la foule.
+Le vendeur de bœuf est déjà parti.
+La boutique du coin reste ouverte tard.
+Achète du pain au retour, s'il te plaît.
+Le boulanger prépare des viennoiseries le week-end.
+Le tailleur coud une nouvelle tenue pour la fête.
+Le cordonnier répare mes chaussures en une heure.
+Le coiffeur du quartier travaille sous l'arbre.
+Le barbier est bon avec les enfants.
+Le vendeur de recharges est à l'entrée.
+Achète-moi une recharge de mille francs.
+Il faut du carburant pour la moto avant de partir.
+La station-service est à cinq minutes d'ici.
+Le mécanicien répare le vélo pour trois cents francs.
+La boutique de tissu reste ouverte jusqu'à midi.
+Le bijoutier polit les bagues au fond de sa boutique.
+Le vendeur ambulant passe chaque matin dans la rue.
+La marchande de galettes s'installe près du carrefour.
+Le vendeur de journaux est là depuis six heures.
+Négocie fort, mais reste toujours poli.
+Il faut se lever tôt pour faire les courses.
+Les prix sont plus doux avant midi.
+Le marché déborde de monde le samedi.
+Emporte un panier solide pour les courses.
+Choisis toi-même les légumes que tu veux.
+La pastèque doit sonner creux à la main.
+Sens la mangue pour vérifier qu'elle est mûre.
+Il faut se laver les mains avant de manger.
+L'infirmier a soigné mon petit frère.
+La maman a emmené le bébé à la clinique.
+Buvez de l'eau propre pour rester en bonne santé.
+Il y a une campagne de vaccination cette semaine.
+Prenez le médicament matin et soir.
+Cette plante soigne les maux de tête.
+Reposez-vous quand vous êtes fatigué.
+Le paludisme est fréquent pendant l'hivernage.
+Dormez sous une moustiquaire pour vous protéger.
+La fièvre est tombée grâce au médicament.
+J'ai mal à la tête depuis hier soir.
+Le mal de ventre est passé après le repos.
+Le rhume gagne toute la maison cette semaine.
+La toux persiste depuis plusieurs jours.
+Les enfants attrapent facilement la grippe.
+La diarrhée est dangereuse pour les tout-petits.
+Emmenez le bébé à la clinique dès demain.
+Le dispensaire ouvre à sept heures du matin.
+Le docteur écoute avec attention nos plaintes.
+La consultation coûte cinq cents francs seulement.
+Le vaccin protège les enfants des maladies graves.
+Il faut vacciner l'enfant contre la rougeole.
+La sage-femme suit la grossesse avec soin.
+Buvez de la solution de sels pour la déshydratation.
+Le paracétamol calme la douleur rapidement.
+La tisane de neem soigne le paludisme léger.
+Le miel est bon pour la gorge irritée.
+Le citron chaud aide contre la toux.
+Il faut se reposer après une longue maladie.
+Mangez des légumes verts pour être en forme.
+Buvez beaucoup d'eau pendant la chaleur.
+Évitez les aliments crus au bord de la route.
+Lavez les fruits avant de les manger.
+Faites bouillir l'eau du marigot avant de la boire.
+Ne partagez pas votre cuillère avec quelqu'un de malade.
+Les moustiques sont nombreux près des eaux stagnantes.
+Videz les récipients qui contiennent de l'eau dormante.
+Coupez les hautes herbes autour de la maison.
+La vaccination est gratuite au centre de santé.
+Emportez le carnet de santé à chaque visite.
+Il faut se peser régulièrement chez l'infirmier.
+La femme enceinte doit consulter chaque mois.
+Le nourrisson doit être vacciné dès la naissance.
+Le bracelet rouge signale un enfant mal nourri.
+Il faut allaiter le bébé jusqu'à six mois.
+Introduisez la bouillie enrichie progressivement.
+Coupez les ongles des enfants chaque semaine.
+Brossez-vous les dents matin et soir.
+Prenez une douche fraîche pour lutter contre la chaleur.
+Aérez la chambre chaque matin.
+Les mouches transmettent beaucoup de maladies.
+Couvrez les aliments pour les protéger des insectes.
+Les rongeurs abîment les provisions dans le grenier.
+Rangez la nourriture dans des boîtes fermées.
+Il pleut fort ce matin, restez à l'abri.
+Le vent souffle du nord depuis hier.
+L'harmattan sèche la peau et les lèvres.
+La saison sèche approche rapidement.
+Il fera très chaud cet après-midi.
+Le ciel est couvert, la pluie arrive bientôt.
+Les nuages annoncent un gros orage.
+Le soleil se couche derrière la colline.
+La chaleur est vraiment insupportable aujourd'hui.
+Les premières pluies vont bientôt tomber.
+L'hivernage commence toujours vers mai ou juin.
+La saison des pluies dure quatre à cinq mois.
+La saison froide arrive en décembre.
+Les nuits sont fraîches en janvier.
+Les vents d'harmattan couvrent tout de poussière.
+Les récoltes dépendent de la bonne pluviométrie.
+La sécheresse a duré plus longtemps cette année.
+Le tonnerre gronde depuis ce matin.
+Les éclairs déchirent le ciel avant l'orage.
+Les torrents emportent tout sur leur passage.
+Restez à l'abri quand la foudre menace.
+Les routes deviennent impraticables après une grosse pluie.
+Le fleuve monte rapidement en pleine saison.
+Les puits se remplissent après quelques semaines de pluie.
+La chaleur atteint son sommet en mars et avril.
+Les vents du sud amènent parfois de la pluie.
+Le brouillard matinal se lève au bord des rivières.
+La rosée mouille les feuilles très tôt le matin.
+L'ombre du grand arbre rafraîchit toute la cour.
+Ouvre les fenêtres pour laisser passer la brise.
+La poussière s'infiltre partout par vent fort.
+Le lever du soleil est magnifique en saison sèche.
+Le coucher du soleil colore tout le ciel en rouge.
+La lune éclaire la cour comme une lampe.
+Les étoiles sont nombreuses par nuit claire.
+Il faut labourer avant la première pluie.
+Nous semons le sorgho au début de l'hivernage.
+Le mil pousse bien cette année.
+Il faut désherber les champs après la pluie.
+La récolte de haricots sera abondante.
+Le paysan garde les meilleures semences.
+On stocke le grain dans le grenier.
+Les vaches paissent au bord du fleuve.
+Attache la chèvre près de l'enclos.
+Le berger conduit le troupeau vers l'eau.
+Le poulailler doit rester propre.
+Les tomates mûrissent au potager.
+Le maïs mûrit sous le soleil brûlant.
+Le sésame se récolte à la fin des pluies.
+L'arachide donne une bonne récolte cette année.
+Le coton est prêt à être cueilli.
+Le niébé se conserve longtemps une fois séché.
+Les tubercules sont sortis de terre.
+Il faut biner le champ après la pluie.
+Le semoir mécanique gagne beaucoup de temps.
+La charrue est prête pour la nouvelle saison.
+Le tracteur laboure le grand champ en quelques heures.
+Le champ collectif attend les hommes du village.
+La coopérative achète les récoltes à bon prix.
+Les greniers se remplissent après la moisson.
+Il faut protéger le grain contre les rongeurs.
+Le poulailler abrite les poules la nuit.
+Le coq annonce le matin très tôt.
+Les poules pondent régulièrement pendant la saison.
+Les poussins sortent de leur coquille.
+Les canards se baignent dans la mare.
+Les pintades sont plus difficiles à élever.
+La chèvre a mis bas hier soir.
+Le chevreau tète sa mère avec appétit.
+Le mouton engraisse rapidement pour la fête.
+Le bélier se prépare pour Tabaski.
+La brebis met bas au bord de l'étable.
+L'agneau apprend vite à marcher.
+Le taureau tire la charrue dans le champ.
+La vache donne beaucoup de lait ce matin.
+Le veau court derrière sa mère.
+Les ânes portent les charges lourdes.
+L'âne aide à transporter les récoltes.
+Les charrettes sont pleines de bois.
+Le berger compte le troupeau avant de rentrer.
+La bergerie doit être nettoyée chaque semaine.
+Le fourrage est stocké pour la saison sèche.
+Les greniers sont pleins de sorgho.
+Le mil se pile encore à la main dans certains villages.
+Le mortier et le pilon sont des outils essentiels.
+Le battage se fait après le séchage au soleil.
+La récolte du karité commence en juin.
+Les femmes préparent l'huile de karité.
+Le beurre de karité soigne la peau.
+Le sésame se vend cher sur le marché.
+Le fonio est un mets délicat.
+L'oseille pousse dans le jardin familial.
+Le potiron sert à faire la sauce.
+Le manioc se plante après les premières pluies.
+La patate douce résiste bien à la chaleur.
+Les tomates cerises poussent facilement en jardin.
+Le gombo se cueille encore tendre.
+L'aubergine locale a une saveur unique.
+Le concombre se mange cru avec du sel.
+Les feuilles de baobab servent aussi de sauce.
+Le tamarin est bon en boisson rafraîchissante.
+Les fruits du néré se pilent longuement.
+Le soumbala assaisonne bien la sauce.
+La ruche donne beaucoup de miel cette année.
+L'apiculteur récolte tôt le matin.
+Le miel du village est très pur.
+Le pêcheur revient avec un beau butin.
+Le fleuve regorge de poissons en saison.
+Le filet a été bien rempli aujourd'hui.
+Le poisson séché se conserve longtemps.
+Le puits est presque à sec.
+Attention, cette eau n'est pas potable.
+Il faut économiser l'eau pendant la saison sèche.
+Balaie la cour avant que les invités arrivent.
+Range les outils dans le hangar.
+La pompe est en panne depuis hier.
+Il faut attendre son tour à la borne-fontaine.
+Portez la bassine avec précaution sur la tête.
+Le forage donne de l'eau propre toute l'année.
+Filtre l'eau avant de la boire.
+Fais bouillir l'eau au moins dix minutes.
+L'eau du fleuve n'est pas sûre à boire.
+Les enfants prennent leur bain dans le grand bassin.
+Le savon local mousse bien à l'eau chaude.
+La lessive s'étend sur la corde au soleil.
+Le linge sèche vite en saison chaude.
+Range le seau dans un endroit propre.
+La citerne se remplit pendant les fortes pluies.
+Le tuyau du robinet doit être surveillé.
+Les canaris gardent l'eau bien fraîche.
+Couvre la jarre pour éviter la poussière.
+Le savon en poudre nettoie les vêtements sales.
+Les enfants se lavent avant de dormir.
+Attention, le sol est glissant après le bain.
+Utilise une éponge propre pour la vaisselle.
+Le bidon doit être bien fermé pour le transport.
+Emporte de l'eau en quantité pour la route.
+Les jerrycans se rangent près de la porte.
+La route vers la ville est longue.
+Le car part de la gare à six heures.
+Cherche la maison du chef derrière la mosquée.
+Le marché central se trouve au coin de la rue.
+Prends le raccourci par le champ de mil.
+L'école est près de la place du village.
+Suivez cette piste jusqu'au pont.
+Attention au fossé au bord de la route.
+Le taxi-brousse s'arrête ici.
+La moto-taxi coûte deux cents francs pour ce trajet.
+Le chauffeur demande combien nous sommes.
+Le taxi collectif attend d'être plein pour partir.
+La gare routière est bondée en fin de journée.
+Le car de nuit arrive tôt le matin en ville.
+Prends un billet pour Ouagadougou à cette fenêtre.
+Le contrôleur passe vérifier les tickets à mi-parcours.
+Attention à tes bagages dans le bus.
+Range ta valise sous le siège.
+Le sac tient sur les genoux pour plus de sûreté.
+Le péage est à la sortie de la ville.
+Ralentis à l'entrée du village.
+Attention aux enfants qui traversent la route.
+Le vélo est plus rapide que la marche.
+Prends la piste à droite après le manguier.
+Traverse le petit pont avec précaution.
+Le carrefour est à cinq cents mètres d'ici.
+Tourne à gauche après la mosquée.
+La pharmacie se trouve juste avant le marché.
+Le dispensaire est en face de l'école.
+Le siège de la préfecture est près du terrain.
+La banque ouvre à huit heures précises.
+La poste ferme entre midi et quinze heures.
+Le bureau du chef est à côté de la mairie.
+Il y a un raccourci par le bosquet.
+Ce sentier mène directement à la rivière.
+La route est goudronnée jusqu'à la frontière.
+La piste devient sableuse après la pluie.
+Attention aux nids-de-poule sur cette route.
+Il faut rouler doucement dans le village.
+Klaxonne avant de tourner au coin.
+La descente est raide, freine à temps.
+Le troupeau traverse la route à cette heure.
+Attends que les vaches passent avant d'avancer.
+Le pont est vieux mais solide.
+Le bac traverse le fleuve toutes les heures.
+Le passage est fermé pendant la crue.
+Il est encore tôt, dormons un peu.
+Le soleil se lève vers cinq heures et demie.
+Nous partirons juste après midi.
+Attends-moi dix minutes s'il te plaît.
+Reviens avant que la nuit tombe.
+Ce marché a lieu tous les trois jours.
+Il y a quatre enfants à la maison.
+Compte les moutons avant de rentrer.
+Rassemble les gens sous l'arbre à palabres.
+Le griot raconte l'histoire de nos ancêtres.
+Les jeunes du village organisent la fête.
+Nous célébrerons la naissance ce soir.
+Que la paix soit sur cette maison.
+Il est presque six heures du soir.
+Le déjeuner sera prêt à midi pile.
+Le petit-déjeuner se prend vers sept heures.
+La sieste commence après le repas de midi.
+Le travail reprend à quinze heures.
+La prière du soir est vers dix-huit heures.
+La fête dure toute la nuit jusqu'au matin.
+Nous nous levons avant le chant du coq.
+Le marché des vendredis est le plus fréquenté.
+Le lundi, tout le monde est au travail.
+Les enfants ne vont pas à l'école le dimanche.
+La rentrée scolaire est en octobre.
+Les grandes vacances durent presque trois mois.
+Il y a trente jours dans le mois.
+Une semaine compte sept jours.
+Le mois compte quatre semaines complètes.
+L'année a douze mois entiers.
+Il y a douze mangues dans le panier.
+Achète une demi-douzaine d'œufs frais.
+Compte jusqu'à dix avant de répondre.
+Cinq enfants sont assis sous le manguier.
+Trois hommes discutent près de la mosquée.
+Il reste deux jours avant la fête.
+J'ai apporté quatre bouteilles d'eau.
+Le sac contient vingt-cinq kilos de mil.
+Le trajet dure environ deux heures.
+Attends une petite minute, j'arrive.
+La saison des pluies dure cinq mois environ.
+La saison sèche est plus longue que la pluie.
+Nous partons pour la ville dans une heure.
+Rejoins-nous au marché avant dix heures.
+Le train passe à seize heures précises.
+La réunion commence à neuf heures du matin.
+Le rendez-vous est fixé à quinze heures.
+Prends ton temps, il n'y a pas d'urgence.
+Nous prions cinq fois par jour.
+La prière du matin ouvre la journée.
+La prière du vendredi rassemble la communauté.
+L'appel du muezzin retentit dans le village.
+La mosquée est pleine pour la prière collective.
+Que Dieu accepte votre prière.
+Nous nous rendons à la mosquée à pied.
+Les enfants apprennent le Coran chez le marabout.
+L'imam prêche avec sagesse chaque vendredi.
+Les chrétiens se rassemblent à l'église le dimanche.
+Le pasteur bénit les mariés avec ferveur.
+Le père baptise le nouveau-né avec joie.
+Les fidèles chantent des cantiques ensemble.
+Ramadan est un mois de partage et de patience.
+Tabaski est la fête du sacrifice du mouton.
+Envoie-moi cinq mille francs par Orange Money.
+J'ai reçu ton transfert d'argent hier soir.
+Tape le code secret pour valider l'opération.
+Le solde de mon compte est presque vide.
+La commission est prélevée à chaque envoi.
+Le kiosque de transfert est ouvert jusqu'à vingt-deux heures.
+Envoie le message de confirmation à mon numéro.
+Le retrait au distributeur prend deux minutes.
+Vérifie bien le numéro avant d'envoyer l'argent.
+Garde le reçu de la transaction en sécurité.
+Le moto-taxi coûte deux cents francs jusqu'au marché.
+Le chauffeur attend au coin de la rue.
+Il faut porter un casque sur la moto.
+Attache bien tes bagages avant de démarrer.
+Les taxis-motos sont pratiques dans la ville.
+Le sotrama part quand il est plein.
+Négocie le prix avant de monter dans le taxi.
+Le triporteur transporte les grosses charges.
+La voiture familiale est en réparation.
+Le camion-benne apporte le sable pour la construction.
+L'école ouvre à sept heures trente précises.
+Le maître fait l'appel avant le début du cours.
+Les élèves récitent la table de multiplication.
+Le tableau noir est bien nettoyé.
+La craie s'use vite quand on écrit beaucoup.
+La récréation commence à dix heures du matin.
+Les élèves rentrent chez eux à midi.
+Les devoirs se font tous les soirs à la maison.
+Le maître corrige les cahiers avec attention.
+Les livres de classe passent d'un enfant à l'autre.
+La bibliothèque du village prête des livres gratuitement.
+L'école primaire compte six niveaux différents.
+Le collège prépare les élèves au brevet.
+Le lycée est à trente kilomètres d'ici.
+L'examen du certificat se déroule en juin.
+Les résultats seront affichés la semaine prochaine.
+Les meilleurs élèves reçoivent des prix à la fin de l'année.
+L'alphabétisation des adultes se fait le soir.
+La bourse aide les enfants pauvres à étudier.
+Il faut respecter les enseignants du village.
+Le tam-tam annonce les grandes réunions.
+Le chef du village convoque une assemblée demain.
+Les hommes se retrouvent sous le grand arbre.
+Les femmes tiennent leur propre réunion.
+Les jeunes proposent des idées à la commune.
+La coopérative gère les récoltes du village.
+Le comité de gestion se réunit chaque trimestre.
+La fête du village rassemble tous les habitants.
+Les danses traditionnelles animent la place publique.
+Le griot chante les louanges des ancêtres.
+Les tambours résonnent jusqu'au petit matin.
+Les jeunes filles portent des tenues colorées.
+Les jeunes garçons paradent avec leurs sabres.
+Le masque sacré sort une fois par an.
+Les initiés dansent autour du feu sacré.
+Le conseil des anciens tranche les différends.
+La palabre dure parfois toute la journée.
+Le vieux sage écoute avant de parler.
+La solidarité fait la force du village.
+Les mariages rapprochent deux familles unies.
+Les fêtes religieuses rassemblent toute la région.
+Le champ collectif nourrit les orphelins.
+La tontine aide les femmes à épargner ensemble.
+Les corvées d'entretien sont partagées équitablement.
+Le puits public bénéficie à tout le quartier.
+Le nouveau chef prête serment devant les anciens.
+Bonjour, que la journée soit clémente.
+Bonsoir, que le sommeil soit doux.
+Que Dieu vous accorde bonne santé.
+Que la matinée soit paisible pour vous.
+Bonne arrivée, entrez vous rafraîchir.
+Bonjour tout le monde, avez-vous mangé ?
+Merci pour la nuit passée ensemble.
+Que la journée soit fructueuse pour tous.
+Bienvenue au village, faites comme chez vous.
+Prends courage, la difficulté va passer.
+Que ton chemin soit sans obstacle.
+Bonne soirée à toi et à ta famille.
+Salut mon ami, quoi de neuf ?
+Bonjour patron, tout se passe bien ?
+La commerçante propose deux prix pour ce sac.
+Ce n'est pas donné, mais ça vaut la peine.
+Tu me fais un bon prix, s'il te plaît.
+Regarde d'abord la qualité avant de payer.
+Je reviendrai plus tard pour acheter.
+Cette étoffe convient bien pour un boubou.
+Vend-moi tes tomates au prix de gros.
+Fais-moi une remise, je suis un client fidèle.
+Emballe bien mes achats pour le transport.
+Rends-moi la monnaie exacte, s'il te plaît.
+Ma carte s'est démagnétisée hier.
+Le petit marché est plus calme le matin.
+Change ces gros billets contre des pièces.
+Compte l'argent devant moi avant de le prendre.
+Il ne faut pas partager sa brosse à dents.
+Coupe les cheveux courts pour les garçons à l'école.
+Le savon noir fait beaucoup de mousse.
+La crème solaire protège contre les rayons.
+Change le pansement chaque matin proprement.
+Les vitamines aident à retrouver des forces.
+Le sirop calme la toux des enfants.
+Les gouttes soulagent la douleur d'oreille.
+Le thermomètre indique trente-huit degrés.
+Le tensiomètre mesure la pression du sang.
+La blessure guérit vite quand elle est propre.
+Repose ta jambe le temps qu'elle cicatrise.
+Ne gratte pas la piqûre de moustique.
+La tortue traverse lentement la cour.
+La cigale chante fort en pleine chaleur.
+Le lézard grimpe sur le mur du salon.
+Le grillon chante tout au long de la nuit.
+Les hirondelles reviennent avec les pluies.
+La chèvre broute les feuilles sèches au sol.
+Le mouton bêle près de la porte.
+Le canard barbote joyeusement dans la mare.
+La pintade court plus vite qu'une poule.
+Le paon déploie sa belle queue au soleil.
+Le chien garde bien la maison la nuit.
+Le chat dort près du fourneau chaud.
+Le cheval galope à travers la savane.
+L'écureuil monte au sommet du karité.
+Les fourmis transportent les grains vers la fourmilière.
+Le paysan sème à la volée dans son champ.
+La récolte s'annonce excellente cette année.
+Les greniers sont pleins avant Noël.
+Le prix du grain baisse après la récolte.
+Le coton se vend bien à l'usine.
+La saison prochaine sera dédiée au sésame.
+Il faut alterner les cultures chaque année.
+Le compost enrichit naturellement la terre.
+Le fumier des animaux nourrit les champs.
+La jachère rend fertile la terre fatiguée.
+Le tracteur remplace peu à peu les bœufs.
+L'irrigation est possible près du barrage.
+Les moustiques pondent dans les eaux stagnantes.
+Videz les vieux pneus après la pluie.
+Ne laissez pas d'ordures autour de la maison.
+Brûlez les feuilles mortes dans un coin sûr.
+Enterrez les déchets non recyclables.
+Le compost se prépare au fond du jardin.
+Récupérez l'eau de pluie pour arroser.
+Plantez des arbres pour lutter contre la sécheresse.
+Le baobab fournit ombre et nourriture.
+Le neem éloigne les insectes du champ.
+Le karité mérite d'être protégé au village.
+Les jeunes plantent des acacias chaque année.
+Le reboisement redonne vie au terroir.
+Le vent d'ouest amène souvent la pluie.
+La grande chaleur descend enfin ce soir.
+Le tonnerre roule au loin sur les collines.
+Le brouillard blanchit la vallée au réveil.
+Le soleil perce à travers les nuages.
+Un arc-en-ciel apparaît après la pluie.
+La grêle est rare mais dévastatrice.
+Le vent transporte la poussière jusqu'à la maison.
+La chaleur monte dès dix heures du matin.
+Le vent froid pique la peau en janvier.
+Range les habits chauds pour l'hiver.
+Prépare une couverture supplémentaire ce soir.
+Nous avons besoin de nouveaux ustensiles de cuisine.
+La marmite en terre garde la chaleur longtemps.
+La calebasse sert à mesurer les céréales.
+Le mortier est fait d'un bois solide.
+Le pilon glisse dans les mains habituées.
+Le tamis sépare la farine des impuretés.
+La cuvette bleue est trop lourde pleine.
+Ferme bien la porte avant de sortir.
+Range la clé dans un endroit connu.
+Éteins la lampe avant de dormir.
+Ne laisse pas la bougie près du rideau.
+Le générateur ronronne toute la nuit.
+La lampe solaire éclaire deux pièces à la fois.
+La grande sœur veille sur ses cadets.
+Le grand-père enseigne l'histoire aux plus jeunes.
+Les parents rentrent tard des champs.
+Le père rentrera pour le repas de midi.
+La mère prépare une surprise pour l'anniversaire.
+Les cousins se retrouvent chaque grande vacance.
+Le petit dernier fait rire toute la famille.
+La tante préférée cuisine des mets délicieux.
+L'oncle offre toujours de bons cadeaux aux enfants.
+Le neveu vient d'entrer à l'université.
+La chapelle du village accueille la messe hebdomadaire.
+Les fidèles chantent avec ferveur le dimanche.
+L'imam lit un verset avec émotion.
+Le catéchiste enseigne les enfants après l'école.
+La sonnerie de la chapelle appelle à la prière.
+La retraite spirituelle dure trois jours.
+Le pèlerinage annuel rassemble beaucoup de fidèles.
+La zakat est distribuée pendant Ramadan.
+Le crédit sur le téléphone s'épuise vite.
+Vérifie la connexion internet avant d'appeler.
+Enregistre-toi au service de transfert d'argent.
+La commission dépend du montant envoyé.
+Le distributeur automatique est en panne aujourd'hui.
+Prends toujours ton casque de moto.
+Rangez les bagages dans le coffre.
+Le chauffeur négocie l'essence avant le départ.
+Le trajet coûte cinq cents francs à trois personnes.
+La station-service ouvre à cinq heures du matin.

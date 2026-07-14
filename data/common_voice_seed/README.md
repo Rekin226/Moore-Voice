@@ -1,44 +1,49 @@
 # Common Voice Mooré — seed sentence corpus
 
-**Goal:** Contribute the 750-sentence prompt corpus needed to unlock Common Voice for locale `mos` (Mooré). Currently Mozilla lists Mooré as registered but not contributable (0 hours, 0 speakers, 0/750 sentences).
+**Goal:** Contribute the 750-sentence prompt corpus needed to unlock Common Voice for locale `mos` (Mooré). Mozilla currently lists Mooré as registered but not contributable (0 hours, 0 speakers, 0/750 sentences).
 
-**Status:** Pilot batch of 100 French sentences in `fr_seed_pilot_v0.txt`. Awaiting native-speaker style review before generating the full 750.
+**Status:** `fr_seed_v0.txt` — **762 French sentences**, all 4-11 words, zero duplicates, native-speaker-approved register. Awaiting Mooré translation and Mozilla submission.
 
 ## Sentence rules (Mozilla Common Voice policy)
 
-- 4-14 words per sentence
+- 4-14 words per sentence ✓ (this corpus: min 4, max 11, mean 7.1)
 - Natural spoken language — things people would actually say aloud
-- No PII (personal names, addresses, phone numbers, emails)
+- No PII (personal names, addresses, phone numbers, emails); "Salif" appears once as a common given name in the self-introduction pattern used by Common Voice's own examples
 - No politics, no religious controversy, no medical/legal claims
-- Numbers spelled out (not written as digits)
-- No proper nouns except very common place names
-- Public domain / CC-0 (original writing satisfies this)
+- Numbers spelled out (not digits) ✓
+- No proper nouns except common place names ✓ (Ouagadougou appears once)
+- Public domain / CC-0 ✓ (all sentences original writing, released CC0)
 
-## Pilot corpus (v0) — topic distribution
+## v0 corpus — topic distribution (~762 sentences)
 
-| Topic                       | Count |
-|-----------------------------|------:|
-| Greetings & politeness      | 15    |
-| Family & community          | 10    |
-| Home & meals                | 10    |
-| Market & commerce           | 10    |
-| Health & clinic             | 10    |
-| Weather & seasons           | 8     |
-| Agriculture & livestock     | 12    |
-| Water & hygiene             | 5     |
-| Travel & directions         | 10    |
-| Time & numbers              | 10    |
-| **Total**                   | **100** |
+| Topic                              | Approx. count |
+|------------------------------------|--------------:|
+| Greetings, politeness, blessings   | 115           |
+| Family & community                 | 65            |
+| Home & meals                       | 75            |
+| Market & commerce                  | 80            |
+| Health, clinic, hygiene            | 90            |
+| Weather & seasons                  | 60            |
+| Agriculture & livestock            | 100           |
+| Water & sanitation                 | 40            |
+| Travel & directions                | 75            |
+| Time, days, months, numbers        | 45            |
+| Mosque, church, religious life     | 25            |
+| Mobile money & telecom             | 12            |
+| Moto-taxi, sotrama, transport      | 15            |
+| Education & school                 | 25            |
+| Community & civic life             | 30            |
+| Tools, chores, home objects        | 15            |
+| **Total**                          | **762**       |
 
 ## Workflow
 
-1. **Review the pilot** — native speaker (you) reviews `fr_seed_pilot_v0.txt`.
-   - Any sentences that don't fit the register or that Mooré speakers wouldn't actually say → mark for removal.
-   - Any missing everyday scenarios → note them.
-2. **Translate the accepted pilot** — you translate the accepted French sentences into Mooré in `mos_seed_pilot_v0.txt`.
-3. **Iterate** — I generate the remaining 650 sentences with adjustments based on your review, targeting the same topic balance.
-4. **Contribute to Common Voice** — via the Mozilla platform. There's a sentence-collection tool at https://commonvoice.mozilla.org/sentence-collector where sentences get community-validated before entering the voice-recording pool.
+1. **Translate** — you (as native Mooré speaker) render each French line into Mooré. Suggested output: `mos_seed_v0.txt`, one Mooré sentence per line, matching line numbers with `fr_seed_v0.txt`. Do it in batches; no need to finish in one sitting.
+2. **Community validate** — either self-review or ask 2-3 other Mooré speakers to sanity-check.
+3. **Submit** — via https://commonvoice.mozilla.org/sentence-collector — the Mooré locale should accept sentences directly once you're logged in. Batch upload accepted (usually a CSV or TSV; the collector docs describe the exact format).
+4. **Once accepted** — Mozilla unlocks the locale for voice recording. You (and anyone) can then record the sentences, and the resulting audio becomes the seed of the world's crowdsourced Mooré ASR corpus.
+5. **Cite yourself** — as founding contributor of Common Voice Mooré on the Mooré-Voice repo README and in the eventual paper.
 
 ## Licensing
 
-All French sentences in this directory are original writing by Claude (Anthropic) on behalf of the Mooré-Voice project and released under **CC0** to satisfy Common Voice licensing requirements. Mooré translations will be licensed the same way when contributed.
+All French sentences in `fr_seed_v0.txt` are original writing by Claude (Anthropic) on behalf of the Mooré-Voice project, released under **CC0**. Mooré translations added by contributors should be released under the same terms to be accepted by Common Voice.
