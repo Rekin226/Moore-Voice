@@ -1,0 +1,79 @@
+start=11:55:41
+Downloading transformers (11.0MiB)
+Downloading hf-xet (4.3MiB)
+Downloading nvidia-nvjitlink (38.9MiB)
+Downloading numpy (15.9MiB)
+Downloading torch (502.2MiB)
+Downloading sentencepiece (1.3MiB)
+Downloading cuda-bindings (6.3MiB)
+Downloading triton (188.6MiB)
+ Downloaded sentencepiece
+ Downloaded hf-xet
+ Downloaded cuda-bindings
+ Downloaded transformers
+ Downloaded numpy
+ Downloaded nvidia-nvjitlink
+ Downloaded triton
+ Downloaded torch
+Installed 55 packages in 119ms
+Loading facebook/nllb-200-distilled-600M ... (first run downloads ~2.5 GB)
+Loading weights:   0%|          | 0/512 [00:00<?, ?it/s]Loading weights: 100%|██████████| 512/512 [00:00<00:00, 100806.63it/s]
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+
+=== Forward translation (X → Mooré) ===
+[fra_Latn → mos_Latn] Bonjour, comment allez-vous aujourd'hui ?
+                → A Zoa, yãmb maanda wãn rũndã?
+
+[fra_Latn → mos_Latn] L'eau souterraine est essentielle pour l'agriculture.
+                → Koɛɛg koom yaa tɩlae ne koodã.
+
+[fra_Latn → mos_Latn] Le marché ouvre à sept heures du matin.
+                → Zĩ-kãnga yikda rũnna sẽng a yopoe.
+
+[eng_Latn → mos_Latn] The children are going to school.
+                → Kom-bɩɩsã kẽngda lekollẽ.
+
+[eng_Latn → mos_Latn] It will rain tomorrow morning.
+                → Sẽn na n yɩlẽ tɩ sa-kãsengã sa.
+
+[eng_Latn → mos_Latn] Please give me a glass of water.
+                → Bɩ y kõ-m koom n kõ-ma.
+
+=== Round-trip (Mooré → X) using forward outputs ===
+[mos_Latn → fra_Latn] A Zoa, yãmb maanda wãn rũndã?
+                original: Bonjour, comment allez-vous aujourd'hui ?
+                back:     Alors, comment allez - vous aujourd'hui?
+
+[mos_Latn → fra_Latn] Koɛɛg koom yaa tɩlae ne koodã.
+                original: L'eau souterraine est essentielle pour l'agriculture.
+                back:     Pour la rcolte, il faut de l'eau pour faire pousser les graines.
+
+[mos_Latn → fra_Latn] Zĩ-kãnga yikda rũnna sẽng a yopoe.
+                original: Le marché ouvre à sept heures du matin.
+                back:     Il est neuf heures du matin.
+
+[mos_Latn → eng_Latn] Kom-bɩɩsã kẽngda lekollẽ.
+                original: The children are going to school.
+                back:     Young people go to school.
+
+[mos_Latn → eng_Latn] Sẽn na n yɩlẽ tɩ sa-kãsengã sa.
+                original: It will rain tomorrow morning.
+                back:     So that the flood could be stopped.
+
+[mos_Latn → eng_Latn] Bɩ y kõ-m koom n kõ-ma.
+                original: Please give me a glass of water.
+                back:     "Give me a drink, please.
+
+Done. Native speaker: rate each Mooré output 1-5 for fluency and adequacy.
+Log ratings in data/CORPORA.md under the Phase 0 checklist.
