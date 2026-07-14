@@ -183,25 +183,70 @@ def load_nllb_filtered(threshold: float = 1.15) -> list[dict]:
     return out
 
 
-def load_flores_eval() -> list[dict]:
-    """FLORES-200 devtest for held-out evaluation. Both directions."""
-    print("[load] openlanguagedata/flores_plus (devtest, mos_Latn ↔ {eng,fra}_Latn)")
-    out = []
+def _load_flores_plus():
+    """openlanguagedata/flores_plus — gated but often accessible with HF login."""
     try:
         eng = load_dataset("openlanguagedata/flores_plus", "eng_Latn", split="devtest")
         fra = load_dataset("openlanguagedata/flores_plus", "fra_Latn", split="devtest")
         mos = load_dataset("openlanguagedata/flores_plus", "mos_Latn", split="devtest")
+        return ([r["text"] for r in eng],
+                [r["text"] for r in fra],
+                [r["text"] for r in mos])
     except Exception as e:
-        print(f"  ! flores_plus load failed: {e}")
+        print(f"  · openlanguagedata/flores_plus unavailable: {type(e).__name__}: {str(e)[:120]}")
+        return None
+
+
+def _load_facebook_flores():
+    """Fallback: facebook/flores (public, ungated). Uses `dev` split under
+    language-code configs; text column may be `sentence` or `text`."""
+    for eng_key, fra_key, mos_key in (
+        ("eng_Latn", "fra_Latn", "mos_Latn"),
+        ("eng", "fra", "mos"),
+    ):
+        try:
+            eng = load_dataset("facebook/flores", eng_key, split="dev", trust_remote_code=True)
+            fra = load_dataset("facebook/flores", fra_key, split="dev", trust_remote_code=True)
+            mos = load_dataset("facebook/flores", mos_key, split="dev", trust_remote_code=True)
+            text_col = "sentence" if "sentence" in eng.column_names else "text"
+            return ([r[text_col] for r in eng],
+                    [r[text_col] for r in fra],
+                    [r[text_col] for r in mos])
+        except Exception as e:
+            print(f"  · facebook/flores keys=({eng_key},{fra_key},{mos_key}) unavailable: "
+                  f"{type(e).__name__}: {str(e)[:100]}")
+    return None
+
+
+def load_flores_eval() -> list[dict]:
+    """FLORES held-out evaluation, both directions. Tries flores_plus, then facebook/flores.
+
+    Both are gated on the Hugging Face Hub as of 2026-07: one-click access
+    request from each dataset page, then `huggingface-cli login` locally.
+      - https://huggingface.co/datasets/openlanguagedata/flores_plus
+      - https://huggingface.co/datasets/facebook/flores
+    When access is granted this loader will populate the `eval` split
+    automatically on the next `build_corpus.py` run.
+    """
+    print("[load] FLORES eval (mos_Latn ↔ {eng,fra}_Latn)")
+    triple = _load_flores_plus() or _load_facebook_flores()
+    if triple is None:
+        print("       ! no FLORES source available — eval split will be empty")
+        print("       → request access at https://huggingface.co/datasets/openlanguagedata/flores_plus")
+        print("       → then `huggingface-cli login` and re-run this script")
         return []
-    n = min(len(eng), len(fra), len(mos))
+    eng_lines, fra_lines, mos_lines = triple
+    n = min(len(eng_lines), len(fra_lines), len(mos_lines))
+    out = []
     for i in range(n):
-        e, f, m = norm_text(eng[i]["text"]), norm_text(fra[i]["text"]), norm_text(mos[i]["text"])
+        e = norm_text(eng_lines[i])
+        f = norm_text(fra_lines[i])
+        m = norm_text(mos_lines[i])
         if all([e, f, m]):
             out.append({"src_lang": "eng_Latn", "src_text": e,
-                        "tgt_lang": "mos_Latn", "tgt_text": m, "source": "flores-devtest"})
+                        "tgt_lang": "mos_Latn", "tgt_text": m, "source": "flores-eval"})
             out.append({"src_lang": "fra_Latn", "src_text": f,
-                        "tgt_lang": "mos_Latn", "tgt_text": m, "source": "flores-devtest"})
+                        "tgt_lang": "mos_Latn", "tgt_text": m, "source": "flores-eval"})
     print(f"       kept {len(out):,} eval pairs (~{n} sentences × 2 directions)")
     return out
 
