@@ -1,0 +1,27 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.env
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Data & models — never commit raw corpora or checkpoints
+data/raw/
+data/processed/
+data/audio/
+models/
+checkpoints/
+*.mdlus
+*.pt
+*.bin
+*.safetensors
+
+# Notebooks
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
