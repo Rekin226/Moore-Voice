@@ -146,7 +146,9 @@ def load_minervus() -> list[dict]:
     n = 0
     for shard in sorted((root / "data").glob("*.parquet")):
         t = pq.read_table(shard)
-        for audio, text in zip(t["bytes"], t["text"], strict=False):
+        # `audio` is a struct<bytes: binary, path: string> column.
+        for audio, text in zip(t["audio"].to_pylist(), t["text"].to_pylist(),
+                               strict=False):
             n += 1
             txt = clean_transcript(str(text))
             if not txt or not any(c.isalpha() for c in txt):
@@ -155,7 +157,7 @@ def load_minervus() -> list[dict]:
                 skipped_lid += 1
                 continue
             try:
-                data, sr = sf.read(io.BytesIO(audio.as_py()))
+                data, sr = sf.read(io.BytesIO(audio["bytes"]))
             except Exception:
                 continue
             dur = len(data) / sr
