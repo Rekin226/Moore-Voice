@@ -1,0 +1,11 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[data] /home/rekin226/Desktop/code_space/Mooré-Voice/data/processed/moore_parallel_v0_1.parquet
+[data] train=390,016 dev=2,000
+src_lang  tgt_lang
+eng_Latn  mos_Latn    187173
+fra_Latn  mos_Latn      7835
+mos_Latn  eng_Latn    187173
+          fra_Latn      7835
+dtype: int64
+[model] facebook/nllb-200-3.3B
+Loading weights:   0%|          | 0/1016 [00:00<?, ?it/s]Loading weights:   0%|          | 1/1016 [00:01<25:35,  1.51s/it]Loading weights:   0%|          | 2/1016 [00:01<11:51,  1.42it/s]Loading weights:  27%|██▋       | 276/1016 [00:01<00:02, 291.52it/s]Loading weights:  39%|███▊      | 392/1016 [00:02<00:01, 330.33it/s]Loading weights:  47%|████▋     | 479/1016 [00:02<00:01, 346.64it/s]Loading weights:  54%|█████▍    | 549/1016 [00:02<00:01, 350.84it/s]Loading weights:  60%|█████▉    | 608/1016 [00:02<00:01, 368.01it/s]Loading weights:  65%|██████▌   | 662/1016 [00:04<00:03, 115.52it/s]Loading weights:  94%|█████████▍| 957/1016 [00:04<00:00, 302.58it/s]Loading weights: 100%|██████████| 1016/1016 [00:04<00:00, 229.88it/s]

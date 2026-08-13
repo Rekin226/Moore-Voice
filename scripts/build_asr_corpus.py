@@ -80,12 +80,27 @@ def clean_transcript(s: str) -> str:
 
 def load_hfdjobii(repo: str, source_tag: str, trust_lid: bool) -> list[dict]:
     """Snapshot-download a hfdjobii TTS set and convert per metadata.csv."""
+    import time
+
     import pandas as pd
     import soundfile as sf
     from huggingface_hub import snapshot_download
 
     print(f"[fetch] {repo}")
-    root = Path(snapshot_download(repo, repo_type="dataset"))
+    # Low concurrency + retry: these repos are thousands of small files and
+    # the Hub rate-limits aggressive snapshot pulls (HTTP 429).
+    root = None
+    for attempt in range(8):
+        try:
+            root = Path(snapshot_download(repo, repo_type="dataset", max_workers=2))
+            break
+        except Exception as e:
+            wait = min(300, 30 * (attempt + 1))
+            print(f"       retry {attempt + 1}/8 in {wait}s ({type(e).__name__}: {str(e)[:80]})")
+            time.sleep(wait)
+    if root is None:
+        print(f"       ! giving up on {repo}")
+        return []
     meta = pd.read_csv(root / "metadata.csv")
     rows = []
     skipped_lid = 0

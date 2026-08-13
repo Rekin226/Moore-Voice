@@ -1,0 +1,96 @@
+{
+  "model": "facebook/nllb-200-distilled-600M",
+  "adapter": null,
+  "generated_at": "2026-08-13T03:02:04+00:00",
+  "beams": 4,
+  "directions": {
+    "eng_Latn→mos_Latn": {
+      "n": 1012,
+      "bleu": 2.94,
+      "chrf++": 20.5,
+      "sample": [
+        {
+          "src": "\"We now have 4-month-old mice that are non-diabetic that used to be diabetic,\" he added.",
+          "ref": "\"Ed tara moasã kiuugã 4 yõense sẽn n ka tare sɩkra bãaga sẽn n reeg dag n tare bãaga,\" a n paase.",
+          "hyp": "A paasame: \"Tõnd tara kom-rãmb sẽn tar kiuug a naas n pa tar sukr ye."
+        },
+        {
+          "src": "Dr. Ehud Ur, professor of medicine at Dalhousie University in Halifax, Nova Scotia and chair of the clinical and scientific division of the Canadian Diabetes Association cautioned that the research is still in its early days.",
+          "ref": "Logtor a Ehud Ur, sẽn n yaa Logtoɛɛmb karen-saambã Dalhousie University Halifax pʋgẽ, Nouvelle-Ecosse la Kanada Diabɛt siãnsã tẽnga sullã taoor soaba keoogame tɩ vɛɛsgra na yaa paalm.",
+          "hyp": "Doktɛɛr Ehud Ur sẽn yaa logtoɛɛg sẽn zãmsd tɩɩm Dalhousie Inivɛrsitetã sẽn be Halifax, Nova Scotia wã, la sẽn yaa Kanada Diabɛt Tigisã logtoɛɛg la bãngd sull taoor soaba, keoogame tɩ rapã sã n bao n bãng b sẽn tõe n maan bũmb ninsã, b ket n yaa sɩngrẽ."
+        },
+        {
+          "src": "Like some other experts, he is skeptical about whether diabetes can be cured, noting that these findings have no relevance to people who already have Type 1 diabetes.",
+          "ref": "Wala bãngdb kẽere, a ka tẽed sẽn n yaa sɩkr bãaga wɛɛngẽ t'a tõe tɩpa m ye, m mim tɩ bãng kãense ka tare vẽenem ne neba sẽn n dag zoe tare sɩkr bãaga Type 1 wã.",
+          "hyp": "Wala bãngdb a taab fãa, a pa tẽed tɩ b tõe n maag bãaga ye. A yeelame tɩ neb nins sẽn zoe n tar bãag sẽn yaa type 1 wã pa segd n maan woto ye."
+        }
+      ]
+    },
+    "fra_Latn→mos_Latn": {
+      "n": 1012,
+      "bleu": 2.54,
+      "chrf++": 20.37,
+      "sample": [
+        {
+          "src": "«Nous avons à présent des souris de 4 mois qui ne sont pas diabétiques alors qu'elles l'étaient auparavant», a-t-il ajouté.",
+          "ref": "\"Ed tara moasã kiuugã 4 yõense sẽn n ka tare sɩkra bãaga sẽn n reeg dag n tare bãaga,\" a n paase.",
+          "hyp": "A paasame: \"Tõnd tara kibs sẽn tar kiuug a naas masã, la b pa tar sukri wa b sẽn da tar-b pĩndã ye\"."
+        },
+        {
+          "src": "Le Dr Ehud Ur, professeur de médecine à l'Université Dalhousie de Halifax (Nouvelle-Écosse) et président de la division clinique et scientifique de l'Association canadienne du diabète, a averti que la recherche en était encore à ses débuts.",
+          "ref": "Logtor a Ehud Ur, sẽn n yaa Logtoɛɛmb karen-saambã Dalhousie University Halifax pʋgẽ, Nouvelle-Ecosse la Kanada Diabɛt siãnsã tẽnga sullã taoor soaba keoogame tɩ vɛɛsgra na yaa paalm.",
+          "hyp": "Dr Ehud Ur sẽn yaa logtoɛɛg sẽn zãmsd tɩɩm Yunivɛrsite a Dalhousie sẽn be Halifax, Nova Scotia wã, la sẽn yaa Canada Diabetes Association logtoɛɛg la bãngd sull taoor soaba, keoogame tɩ b ra ket n baoodame n na n maan woto."
+        },
+        {
+          "src": "À l'instar d'autres experts, il se montre sceptique quant à la possibilité de guérir le diabète, faisant remarquer que ces résultats ne sont pas applicables aux personnes qui souffrent déjà de diabète de type 1.",
+          "ref": "Wala bãngdb kẽere, a ka tẽed sẽn n yaa sɩkr bãaga wɛɛngẽ t'a tõe tɩpa m ye, m mim tɩ bãng kãense ka tare vẽenem ne neba sẽn n dag zoe tare sɩkr bãaga Type 1 wã.",
+          "hyp": "Wala bãngdb a taabã, a pa tẽed tɩ b tõe n maag bãaga ye. A yeelame tɩ pa neb nins sẽn zoe n tar bãaga sẽn boond t'a type 1 ye."
+        }
+      ]
+    },
+    "mos_Latn→eng_Latn": {
+      "n": 1012,
+      "bleu": 8.71,
+      "chrf++": 29.01,
+      "sample": [
+        {
+          "src": "\"Ed tara moasã kiuugã 4 yõense sẽn n ka tare sɩkra bãaga sẽn n reeg dag n tare bãaga,\" a n paase.",
+          "ref": "\"We now have 4-month-old mice that are non-diabetic that used to be diabetic,\" he added.",
+          "hyp": "\"Ed is now 4 months pregnant after contracting diabetes\", she adds."
+        },
+        {
+          "src": "Logtor a Ehud Ur, sẽn n yaa Logtoɛɛmb karen-saambã Dalhousie University Halifax pʋgẽ, Nouvelle-Ecosse la Kanada Diabɛt siãnsã tẽnga sullã taoor soaba keoogame tɩ vɛɛsgra na yaa paalm.",
+          "ref": "Dr. Ehud Ur, professor of medicine at Dalhousie University in Halifax, Nova Scotia and chair of the clinical and scientific division of the Canadian Diabetes Association cautioned that the research is still in its early days.",
+          "hyp": "Dr. Ehud Ur, Professor of Medicine at Dalhousie University in Halifax, Nova Scotia and the head of the National Diabetes Science Board of Canada, warned that the list would be updated."
+        },
+        {
+          "src": "Wala bãngdb kẽere, a ka tẽed sẽn n yaa sɩkr bãaga wɛɛngẽ t'a tõe tɩpa m ye, m mim tɩ bãng kãense ka tare vẽenem ne neba sẽn n dag zoe tare sɩkr bãaga Type 1 wã.",
+          "ref": "Like some other experts, he is skeptical about whether diabetes can be cured, noting that these findings have no relevance to people who already have Type 1 diabetes.",
+          "hyp": "Like some scientists, he doesn't believe that diabetes can be cured, and I'm sure that this has not been the case with people who have had Type 1 diabetes."
+        }
+      ]
+    },
+    "mos_Latn→fra_Latn": {
+      "n": 1012,
+      "bleu": 7.04,
+      "chrf++": 26.49,
+      "sample": [
+        {
+          "src": "\"Ed tara moasã kiuugã 4 yõense sẽn n ka tare sɩkra bãaga sẽn n reeg dag n tare bãaga,\" a n paase.",
+          "ref": "«Nous avons à présent des souris de 4 mois qui ne sont pas diabétiques alors qu'elles l'étaient auparavant», a-t-il ajouté.",
+          "hyp": "\"Ed est maintenant âgé de 4 mois, après avoir contracté le diabète sucré\", ajoute- t- elle."
+        },
+        {
+          "src": "Logtor a Ehud Ur, sẽn n yaa Logtoɛɛmb karen-saambã Dalhousie University Halifax pʋgẽ, Nouvelle-Ecosse la Kanada Diabɛt siãnsã tẽnga sullã taoor soaba keoogame tɩ vɛɛsgra na yaa paalm.",
+          "ref": "Le Dr Ehud Ur, professeur de médecine à l'Université Dalhousie de Halifax (Nouvelle-Écosse) et président de la division clinique et scientifique de l'Association canadienne du diabète, a averti que la recherche en était encore à ses débuts.",
+          "hyp": "Le Dr Ehud Ur, professeur de médecine à l'Université Dalhousie à Halifax, en Nouvelle-Écosse et chef de l'Association nationale des sciences du diabète au Canada, a mis en garde contre une nouvelle version."
+        },
+        {
+          "src": "Wala bãngdb kẽere, a ka tẽed sẽn n yaa sɩkr bãaga wɛɛngẽ t'a tõe tɩpa m ye, m mim tɩ bãng kãense ka tare vẽenem ne neba sẽn n dag zoe tare sɩkr bãaga Type 1 wã.",
+          "ref": "À l'instar d'autres experts, il se montre sceptique quant à la possibilité de guérir le diabète, faisant remarquer que ces résultats ne sont pas applicables aux personnes qui souffrent déjà de diabète de type 1.",
+          "hyp": "Comme d'autres spécialistes, il ne pense pas qu'il puisse guérir le diabète, et je sais que les gens qui ont fui le diabète de type 1 n'ont pas compris."
+        }
+      ]
+    }
+  }
+}
