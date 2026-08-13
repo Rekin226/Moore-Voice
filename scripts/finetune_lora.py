@@ -52,7 +52,7 @@ def parse_args() -> argparse.Namespace:
 
 
 def load_split(corpus: str, split: str, subset: int, max_per_source: int,
-               seed: int) -> "pd.DataFrame":  # noqa: F821
+               seed: int) -> pd.DataFrame:  # noqa: F821
     import pandas as pd
 
     df = pd.read_parquet(corpus)

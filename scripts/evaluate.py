@@ -18,7 +18,7 @@ from __future__ import annotations
 
 import argparse
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -71,7 +71,7 @@ def main() -> None:
     results: dict = {
         "model": args.model,
         "adapter": args.adapter,
-        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "generated_at": datetime.now(UTC).isoformat(timespec="seconds"),
         "beams": args.beams,
         "directions": {},
     }

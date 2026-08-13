@@ -8,19 +8,21 @@ _Repo name on GitHub is `Moore-Voice` (no accent — GitHub restriction). Human 
 
 ---
 
-## Status (2026-07)
+## Status (2026-08)
 
 | Track | Status |
 |---|---|
-| Zero-shot NLLB-200-3.3B baseline on 6-sentence Mooré test | ✅ done — usable but imperfect (`docs/FINETUNE_PLAN.md`) |
-| Public Mooré dataset audit (HF + OPUS + Common Voice + Wikipedia) | ✅ done — 28+ Mooré-specific HF datasets + 2.2M OPUS bitexts catalogued in `data/CORPORA.audit.json` |
-| Curated v0 parallel corpus | ✅ **210,455 clean pairs** (mt560 + mistral-v2 + NLLB-filtered) in `data/processed/moore_parallel_v0.parquet` |
-| FLORES-200 eval split | ⚠️ needs HF access request to `openlanguagedata/flores_plus` |
+| Public Mooré dataset audit (HF + OPUS + Common Voice + Wikipedia) | ✅ done — catalogued in `data/CORPORA.audit.json` |
+| Curated parallel corpus **v0.1** | ✅ **205,271 clean pairs / 414,590 direction-rows** — detokenised, LID-gated on every Mooré side, fragment-filtered, pair-level splits, all 4 directions (`data/processed/`, rebuild with `scripts/build_corpus.py`) |
+| FLORES-200 eval split | ✅ **1,012 devtest sentences × 4 directions**, fetched from Meta's public mirror (no gating), train/dev decontaminated against it on both sides |
+| NLLB LoRA fine-tune | ✅ pipeline validated (shakedown) → full 600M + 3.3B runs on local RTX 4070; adapters in `models/` |
+| Automatic evaluation (BLEU / chrF++) | ✅ `scripts/evaluate.py`, before/after in `docs/RESULTS_v0.md` |
+| ASR corpus (~38k transcribed utterances) | ✅ `scripts/build_asr_corpus.py` → `data/audio/` (see `data/AUDIO_CORPORA.md`) |
+| ASR fine-tune (Whisper-small) | ✅ `scripts/finetune_whisper.py` + WER/CER in `scripts/evaluate_asr.py` |
+| Demo app (translate + speech→text→translate) | ✅ `app.py` (Gradio, local or HF Space) |
 | Common Voice `mos` locale — 750 seed sentences | ✅ **762 French sentences** ready in `data/common_voice_seed/fr_seed_v0.txt` |
-| Mooré translations of the seed corpus | ⏳ awaiting native-speaker work → `mos_seed_v0.txt` |
-| NLLB LoRA fine-tune (v0) | 📋 plan in `docs/FINETUNE_PLAN.md`, awaiting GPU |
-| ASR fine-tune (Parakeet / Omnilingual ASR) | 📋 not started |
-| Public demo on Hugging Face Space | 📋 not started |
+| Mooré translations of the seed corpus | ⏳ awaiting native-speaker work → `mos_seed_v0.txt` — **the one step no machine can do** |
+| Native-speaker rating of model outputs | ⏳ rating sheet in `docs/RESULTS_v0.md` |
 
 ## Why
 
@@ -74,27 +76,35 @@ Mooré-Voice/
 
 ## Quickstart
 
-**Reproduce the Phase-0 baselines:**
-
 ```bash
-uv run --python 3.12 \
-  --with 'transformers>=4.44' --with 'torch>=2.3,<3' \
-  --with 'sentencepiece' --with 'protobuf' \
-  python scripts/verify_nllb_baseline.py    # NLLB-200-600M distilled
+# 1. Rebuild the parallel corpus (downloads pinned public sources + FLORES-200)
+uv run --python 3.12 --with opustools python scripts/fetch_translatewiki_fr.py
+uv run --python 3.12 --with 'datasets>=2.20' --with 'pandas>=2.0' \
+  --with 'pyarrow>=15' --with huggingface_hub python scripts/build_corpus.py
+
+# 2. Fine-tune NLLB (LoRA, fits a 12 GB consumer GPU)
+uv run --python 3.12 --with 'transformers>=4.44' --with 'peft>=0.11' \
+  --with torch --with sentencepiece --with protobuf --with 'accelerate>=0.30' \
+  --with 'datasets>=2.20' --with pandas --with pyarrow \
+  python scripts/finetune_lora.py --model facebook/nllb-200-distilled-600M \
+  --epochs 2 --batch 8 --accum 4 --output models/nllb-600M-moore-lora-v0
+
+# 3. Evaluate on FLORES-200 devtest (all 4 directions, BLEU + chrF++)
+uv run ... python scripts/evaluate.py --out .logs/eval_base.json                # zero-shot
+uv run ... python scripts/evaluate.py --adapter models/nllb-600M-moore-lora-v0 \
+  --out .logs/eval_lora.json                                                    # fine-tuned
+
+# 4. ASR corpus + Whisper fine-tune
+uv run ... python scripts/build_asr_corpus.py
+uv run ... python scripts/finetune_whisper.py --epochs 3 --output models/whisper-small-mos-v0
+
+# 5. Demo (translation + speech-to-text)
+uv run --python 3.12 --with gradio --with 'transformers>=4.44' --with 'peft>=0.11' \
+  --with torch --with sentencepiece --with protobuf --with soundfile --with librosa \
+  python app.py
 ```
 
-Swap `verify_nllb_baseline.py` for `verify_nllb_3b3.py` to run the 3.3B variant (needs ~6 GB download + ~15 min CPU inference).
-
-**Rebuild the parallel corpus:**
-
-```bash
-uv run --python 3.12 \
-  --with 'datasets>=2.20' --with 'pandas>=2.0' --with 'pyarrow>=15' \
-  --with 'huggingface_hub' \
-  python scripts/build_corpus.py
-```
-
-Output → `data/processed/moore_parallel_v0.parquet` + `manifest.json`. The eval split needs FLORES access (see the script for the URL).
+Unit tests: `uv run --python 3.12 --with pytest --with pandas --with pyarrow -m pytest`.
 
 ## How to contribute
 
@@ -107,23 +117,28 @@ Output → `data/processed/moore_parallel_v0.parquet` + `manifest.json`. The eva
 ### Phase 0 — Baseline verification ✅
 - [x] Run NLLB-200 zero-shot on native-speaker verified sentences
 - [x] Audit existing Mooré datasets on HF, OPUS, Common Voice, Wikipedia
-- [ ] Test Omnilingual ASR on native Mooré audio
 
 ### Phase 1 — Corpus ✅
-- [x] Assemble redistributable parallel Fr/En↔Mooré text (**210k pairs**)
+- [x] Assemble parallel Fr/En↔Mooré text, cleaned + LID-gated (**205k pairs, 4 directions**)
+- [x] FLORES-200 devtest as held-out eval (public Meta mirror; train/dev decontaminated)
 - [x] Draft 750-sentence seed corpus for Common Voice `mos` (**762 sentences done**)
-- [ ] Translate seed corpus into Mooré and submit to Common Voice
-- [ ] Add FLORES-200 devtest as held-out eval (blocked on access request)
+- [ ] Translate seed corpus into Mooré and submit to Common Voice ← **needs a native speaker**
 
-### Phase 2 — Fine-tune
-- [ ] LoRA fine-tune of NLLB-200-3.3B on the curated corpus (Colab / Azure GPU)
-- [ ] Publish HF checkpoint under `Rekin226/nllb-200-3.3B-moore-lora-v0`
-- [ ] Live translation demo on Hugging Face Space
+### Phase 2 — Translation fine-tune ✅ (local RTX 4070)
+- [x] LoRA fine-tune of NLLB-200-600M on the curated corpus, all 4 directions
+- [x] LoRA fine-tune of NLLB-200-3.3B (overnight run)
+- [x] BLEU/chrF++ before/after on FLORES devtest → `docs/RESULTS_v0.md`
+- [ ] Native-speaker rating of fine-tuned outputs (sheet in RESULTS_v0.md)
 
-### Phase 3 — ASR + Upstream
-- [ ] Assemble audio corpus from hfdjobii / CITADEL-BF / goaicorp / Common Voice
-- [ ] Fine-tune Parakeet-TDT and Omnilingual ASR
-- [ ] Contribute Mooré recipe to NVIDIA/NeMo examples
+### Phase 3 — ASR ✅ (v0)
+- [x] Assemble ~38k-utterance transcribed Mooré audio corpus (`data/AUDIO_CORPORA.md`)
+- [x] Fine-tune Whisper-small for Mooré speech→text; WER/CER on held-out split
+- [ ] Access to gated CITADEL-BF / goaicorp audio (~2× more data)
+
+### Phase 4 — Release + Upstream
+- [x] Gradio demo app (translate + speech→text→translate)
+- [ ] Publish adapters + demo Space under `Rekin226/*`
+- [ ] Common Voice `mos` unlocked (after seed translation)
 - [ ] Publish preprint (EMNLP or LREC target)
 
 ## Data licensing policy

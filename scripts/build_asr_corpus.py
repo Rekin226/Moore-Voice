@@ -34,7 +34,7 @@ import re
 import sys
 import wave
 from collections import Counter
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -131,7 +131,7 @@ def load_minervus() -> list[dict]:
     n = 0
     for shard in sorted((root / "data").glob("*.parquet")):
         t = pq.read_table(shard)
-        for audio, text in zip(t["bytes"], t["text"]):
+        for audio, text in zip(t["bytes"], t["text"], strict=False):
             n += 1
             txt = clean_transcript(str(text))
             if not txt or not any(c.isalpha() for c in txt):
@@ -205,7 +205,7 @@ def main() -> None:
 
     hours = sum(r["duration_s"] for r in all_rows) / 3600
     manifest_meta = {
-        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "generated_at": datetime.now(UTC).isoformat(timespec="seconds"),
         "utterances": len(all_rows),
         "hours": round(hours, 2),
         "per_split": dict(Counter(r["split"] for r in all_rows)),

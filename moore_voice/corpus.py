@@ -25,7 +25,7 @@ import tarfile
 import urllib.request
 import zipfile
 from collections import Counter
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 from .text import clean_text, looks_moore, pair_ok
@@ -183,7 +183,7 @@ def load_translatewiki() -> list[dict]:
         en = z.read("translatewiki.en-mos.en").decode().splitlines()
         mos = z.read("translatewiki.en-mos.mos").decode().splitlines()
     kept = 0
-    for e, m in zip(en, mos):
+    for e, m in zip(en, mos, strict=False):
         p = _pair("eng_Latn", e, m, "translatewiki")
         if p:
             out.append(p)
@@ -196,7 +196,7 @@ def load_translatewiki() -> list[dict]:
         fr = fr_f.read_text().splitlines()
         mos = mos_f.read_text().splitlines()
         kept = 0
-        for f, m in zip(fr, mos):
+        for f, m in zip(fr, mos, strict=False):
             p = _pair("fra_Latn", f, m, "translatewiki")
             if p:
                 out.append(p)
@@ -223,7 +223,7 @@ def load_flores_eval() -> list[dict]:
         mos = lines("flores200_dataset/devtest/mos_Latn.devtest")
     assert len(eng) == len(fra) == len(mos) == 1012, "unexpected FLORES size"
     out = []
-    for e, f, m in zip(eng, fra, mos):
+    for e, f, m in zip(eng, fra, mos, strict=False):
         e, f, m = clean_text(e), clean_text(f), clean_text(m)
         if all([e, f, m]):
             out.append({"xx_lang": "eng_Latn", "xx_text": e, "mos_text": m,
@@ -321,7 +321,7 @@ def build(out_name: str = "moore_parallel_v0_1.parquet") -> Path:
     per_dir = Counter((r["src_lang"], r["tgt_lang"], r["split"]) for r in rows)
     manifest = {
         "version": "v0.1",
-        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "generated_at": datetime.now(UTC).isoformat(timespec="seconds"),
         "output": str(out.relative_to(REPO_ROOT)),
         "total_rows": len(df),
         "unique_pairs": {"train": len(train_pairs), "dev": len(dev_pairs),

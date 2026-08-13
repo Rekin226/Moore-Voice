@@ -8,11 +8,12 @@
 
 from __future__ import annotations
 
-from datasets import load_dataset
-from collections import Counter
 import random
 import re
 import sys
+from collections import Counter
+
+from datasets import load_dataset
 
 random.seed(42)
 

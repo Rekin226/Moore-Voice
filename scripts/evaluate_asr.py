@@ -16,7 +16,7 @@ import argparse
 import json
 import re
 import unicodedata
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -112,7 +112,7 @@ def main() -> None:
         "n": len(rows),
         "wer": round(wer, 4),
         "cer": round(cer, 4),
-        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "generated_at": datetime.now(UTC).isoformat(timespec="seconds"),
         "samples": [{"ref": refs[i], "hyp": hyps[i]} for i in range(min(5, len(rows)))],
     }, indent=2, ensure_ascii=False))
     print(f"[write] {out}")

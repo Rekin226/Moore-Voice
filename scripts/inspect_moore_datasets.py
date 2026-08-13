@@ -13,9 +13,10 @@ Audio datasets get their own inspector later (bigger download).
 
 from __future__ import annotations
 
-from datasets import load_dataset, get_dataset_config_names, get_dataset_split_names
-import traceback
 import json
+import traceback
+
+from datasets import get_dataset_config_names, get_dataset_split_names, load_dataset
 
 # Text-first Mooré datasets from the audit. Skipping audio (bigger download, own inspector).
 CANDIDATES = [
