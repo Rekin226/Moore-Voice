@@ -1,0 +1,44 @@
+Installed 62 packages in 235ms
+Loading weights:   0%|          | 0/1016 [00:00<?, ?it/s]Loading weights:  39%|███▉      | 396/1016 [00:00<00:00, 3941.26it/s]Loading weights:  78%|███████▊  | 791/1016 [00:00<00:00, 2807.35it/s]Loading weights: 100%|██████████| 1016/1016 [00:00<00:00, 2533.46it/s]
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=128) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[fra→mos] Ouagadougou tẽnga raag pakda yibeoog wakat a yopoe.
+[fra→mos] Rɩk-y y nusã n yaool n dɩ.
+[fra→mos] Saagã sãama sor ning sẽn kẽngd tẽn-bilã.
+[fra→mos] Zĩ-kãnga, zom-koomã ligdã yaa wãna?
+[fra→mos] Sõangd-n -taagã kõta biig ning sẽn bẽedã tɩɩm.
+[eng→mos] Koom-koaadbã bʋta miis tɩ saagã nan ka ni ye.
+[eng→mos] Sõng-y tɩ y tall y bãagã n kẽng logtor yirã.
+[eng→mos] Basã sẽn dabd Koudougou yita wĩnto-sʋka.
+[eng→mos] Koom sẽn yaa yɩlemdã kɩtdame tɩ kambã tar laafɩ.
+[eng→mos] Karen-saambã gʋlsa bũmb ning b sẽn zãms-a wã tablɛtã zugu.
+[mos→fra] " Ed a maintenant 4 mois de diabète non diagnostiqué ", a-t-il ajouté.
+[mos→fra] Arly Velasquez du Mexique a terminé quinzième en Super-G. Adam Hall de Nouvelle-Zélande a terminé neuvième en Super-G.
+[mos→fra] Bien que l'écrivain ne soit pas connu, il est probable qu'au cours de sa vie antérieure, une grande partie de sa taille (environ 293⁄4 pouces par 241⁄2 pouces) ait été enlevée.
+[mos→fra] Prenons l'exemple de l'île de Bornéo.
+[mos→fra] Le langage sans safari a longtemps été considéré comme l'un des principaux moyens de communication entre les espèces sauvages d'Afrique et le reste du monde, mais il est devenu essentiellement basé sur la savane.
+[mos→eng] However, the prevalence of XDR-TB in the group of chronic tuberculosis patients appears to be low; 6,000 cases per 330,000 people in South Africa at the time.
+[mos→eng] Japan's Ministry of Economy, Trade and Industry (METI) said it had received a total of 27 data breaches.
+[mos→eng] Children must be in extreme poverty or be severely malnourished before they can be abandoned.
+[mos→eng] Winter visitors to Casablanca began arriving in the 10th century during the Age of Discovery, when Phoenician, Roman and Merenid sailors sailed to the island of Anfa.
+[mos→eng] In remote areas, where mobile phones are unresponsive, local telephone lines may be blocked.
+[write] /home/rekin226/Desktop/code_space/Mooré-Voice/docs/RATING_SHEET_v0.md
+exit=0

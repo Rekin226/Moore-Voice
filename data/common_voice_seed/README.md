@@ -39,6 +39,11 @@
 ## Workflow
 
 1. **Translate** — you (as native Mooré speaker) render each French line into Mooré. Suggested output: `mos_seed_v0.txt`, one Mooré sentence per line, matching line numbers with `fr_seed_v0.txt`. Do it in batches; no need to finish in one sitting.
+   - **Head start:** `mos_seed_v0_draft.txt` contains machine drafts from the
+     fine-tuned NLLB-3.3B LoRA (same line numbers). **Review and correct each
+     line** — copy good ones, fix or rewrite the rest, then save as
+     `mos_seed_v0.txt`. Mozilla requires human-validated sentences; never
+     submit unreviewed machine output.
 2. **Community validate** — either self-review or ask 2-3 other Mooré speakers to sanity-check.
 3. **Submit** — via https://commonvoice.mozilla.org/sentence-collector — the Mooré locale should accept sentences directly once you're logged in. Batch upload accepted (usually a CSV or TSV; the collector docs describe the exact format).
 4. **Once accepted** — Mozilla unlocks the locale for voice recording. You (and anyone) can then record the sentences, and the resulting audio becomes the seed of the world's crowdsourced Mooré ASR corpus.

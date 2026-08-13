@@ -19,7 +19,7 @@ import gradio as gr
 import torch
 
 MT_BASE = os.environ.get("MOORE_MT_BASE", "facebook/nllb-200-distilled-600M")
-MT_ADAPTER = os.environ.get("MOORE_MT_ADAPTER", "Rekin226/nllb-600M-moore-lora")
+MT_ADAPTER = os.environ.get("MOORE_MT_ADAPTER", "Rekin226/nllb-600M-moore-lora-v0")
 ASR_ENGINE = os.environ.get("MOORE_ASR_ENGINE", "whisper")  # whisper | mms
 ASR_MODEL = os.environ.get("MOORE_ASR_MODEL", "Rekin226/whisper-small-moore-v0")
 ASR_LANG = os.environ.get("MOORE_ASR_LANG", "yo")  # anchor token used in training
@@ -80,7 +80,7 @@ def translate(text: str, src_name: str, tgt_name: str) -> str:
         out = model.generate(
             **enc,
             forced_bos_token_id=tok.convert_tokens_to_ids(LANGS[tgt_name]),
-            num_beams=4,
+            num_beams=4 if DEVICE == "cuda" else 2,  # keep CPU Spaces responsive
             max_new_tokens=192,
         )
     return tok.batch_decode(out, skip_special_tokens=True)[0]
