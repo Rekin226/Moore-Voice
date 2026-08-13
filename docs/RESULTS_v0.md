@@ -1,6 +1,6 @@
 # Mooré-Voice v0 results
 
-_Generated 2026-08-13T07:12:02+00:00 by `scripts/make_results_doc.py`. Do not edit the tables by hand._
+_Generated 2026-08-13T09:06:04+00:00 by `scripts/make_results_doc.py`. Do not edit the tables by hand._
 
 ## Translation — FLORES-200 devtest (1,012 sentences/direction)
 
@@ -28,6 +28,8 @@ chrF++ is the primary metric for Mooré; BLEU shown for comparability.
 
 | Model | WER ↓ | CER ↓ | n |
 |---|---:|---:|---:|
+| MMS-1b-all (mos adapter, zero-shot) | 0.3111 | 0.086 | 564 |
+| Whisper-small fine-tuned v0 | 0.3408 | 0.1136 | 564 |
 
 ## Samples (fine-tuned)
 

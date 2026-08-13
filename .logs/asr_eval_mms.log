@@ -1,0 +1,16 @@
+[eval] 564 utterances from split=test
+Loading weights:   0%|          | 0/1096 [00:00<?, ?it/s]Loading weights:  39%|███▊      | 424/1096 [00:00<00:00, 4224.54it/s]Loading weights:  88%|████████▊ | 959/1096 [00:00<00:00, 4883.11it/s]Loading weights: 100%|██████████| 1096/1096 [00:00<00:00, 4876.75it/s]
+  0/564
+  50/564
+  100/564
+  150/564
+  200/564
+  250/564
+  300/564
+  350/564
+  400/564
+  450/564
+  500/564
+  550/564
+[score] facebook/mms-1b-all(mos adapter)  WER=0.311  CER=0.086
+[write] .logs/asr_mms_base.json

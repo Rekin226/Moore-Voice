@@ -1,0 +1,30 @@
+{
+  "model": "facebook/mms-1b-all(mos adapter)",
+  "split": "test",
+  "n": 564,
+  "wer": 0.3111,
+  "cer": 0.086,
+  "generated_at": "2026-08-13T09:04:42+00:00",
+  "samples": [
+    {
+      "ref": "Bɩ Sẽn-Ka-Saab ning-y bark la b gũ-yã!",
+      "hyp": "bɩ sẽn ka saab ning y bark la b gũyã"
+    },
+    {
+      "ref": "Baa b sẽn lob b bʋ-kaoodbã tɩ b yi tãngã zug n lʋɩ wã, nebã na n kelga mam goamã sõma, bala yaa gom-noodo.",
+      "hyp": "baa b sõnd-b b bʋ-kaoodba tɩ b yi tãnga zugẽn lʋɩ wã nebã na n kelga mam goama sõma bala yaa gom-noodo"
+    },
+    {
+      "ref": "laafɩ beeme",
+      "hyp": "laafi beeme"
+    },
+    {
+      "ref": "A Aara yagensã yɩɩ neb kobs-yopoe la pis-yopoe la a nu.",
+      "hyp": "a aara yagensa yɩɩ neb kobe sopoe la a pi-sopoe la a no"
+    },
+    {
+      "ref": "paabo",
+      "hyp": "pabo"
+    }
+  ]
+}

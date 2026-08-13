@@ -18,7 +18,8 @@ _Repo name on GitHub is `Moore-Voice` (no accent — GitHub restriction). Human 
 | NLLB LoRA fine-tune | ✅ pipeline validated (shakedown) → full 600M + 3.3B runs on local RTX 4070; adapters in `models/` |
 | Automatic evaluation (BLEU / chrF++) | ✅ `scripts/evaluate.py`, before/after in `docs/RESULTS_v0.md` |
 | ASR corpus (~38k transcribed utterances) | ✅ `scripts/build_asr_corpus.py` → `data/audio/` (see `data/AUDIO_CORPORA.md`) |
-| ASR fine-tune (Whisper-small) | ✅ `scripts/finetune_whisper.py` + WER/CER in `scripts/evaluate_asr.py` |
+| ASR fine-tune (Whisper-small) | ✅ trained — WER 34.1% / CER 11.4% on held-out test; MMS-1b zero-shot baseline WER 31.1% (`docs/RESULTS_v0.md`) |
+| Published models | ✅ [`Rekin226/nllb-3.3B-moore-lora-v0`](https://huggingface.co/Rekin226/nllb-3.3B-moore-lora-v0) · [`Rekin226/nllb-600M-moore-lora-v0`](https://huggingface.co/Rekin226/nllb-600M-moore-lora-v0) · [`Rekin226/whisper-small-moore-v0`](https://huggingface.co/Rekin226/whisper-small-moore-v0) |
 | Demo app (translate + speech→text→translate) | ✅ `app.py` (Gradio, local or HF Space) |
 | Common Voice `mos` locale — 750 seed sentences | ✅ **762 French sentences** ready in `data/common_voice_seed/fr_seed_v0.txt` |
 | Mooré translations of the seed corpus | ⏳ awaiting native-speaker work → `mos_seed_v0.txt` — **the one step no machine can do** |
@@ -131,8 +132,10 @@ Unit tests: `uv run --python 3.12 --with pytest --with pandas --with pyarrow -m 
 - [ ] Native-speaker rating of fine-tuned outputs (sheet in RESULTS_v0.md)
 
 ### Phase 3 — ASR ✅ (v0)
-- [x] Assemble ~38k-utterance transcribed Mooré audio corpus (`data/AUDIO_CORPORA.md`)
-- [x] Fine-tune Whisper-small for Mooré speech→text; WER/CER on held-out split
+- [x] Assemble 37,654-utterance / 85 h transcribed Mooré audio corpus (`data/AUDIO_CORPORA.md`)
+- [x] Fine-tune Whisper-small for Mooré speech→text (WER 34.1% test)
+- [x] MMS-1b-all `mos` zero-shot baseline (WER 31.1% — currently the stronger engine; `MOORE_ASR_ENGINE=mms` in the demo)
+- [ ] Fine-tune the MMS `mos` adapter on our corpus (expected to beat both)
 - [ ] Access to gated CITADEL-BF / goaicorp audio (~2× more data)
 
 ### Phase 4 — Release + Upstream

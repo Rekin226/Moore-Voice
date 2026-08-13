@@ -148,6 +148,10 @@ def main() -> None:
         print(f"[skip] {asr_local} missing")
 
     for repo_id, local, card in jobs:
+        has_weights = any(local.glob("*.safetensors")) or any(local.glob("*.bin"))
+        if not has_weights:
+            print(f"[skip] {local} has no weights (training incomplete?)")
+            continue
         print(f"[publish] {repo_id}  ←  {local}")
         if args.dry_run:
             continue

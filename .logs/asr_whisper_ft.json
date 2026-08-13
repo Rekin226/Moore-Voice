@@ -1,0 +1,30 @@
+{
+  "model": "models/whisper-small-mos-v0",
+  "split": "test",
+  "n": 564,
+  "wer": 0.3408,
+  "cer": 0.1136,
+  "generated_at": "2026-08-13T09:02:45+00:00",
+  "samples": [
+    {
+      "ref": "Bɩ Sẽn-Ka-Saab ning-y bark la b gũ-yã!",
+      "hyp": "Bɩ Sẽn-Ka-Saab ning-y bark la b gũyã."
+    },
+    {
+      "ref": "Baa b sẽn lob b bʋ-kaoodbã tɩ b yi tãngã zug n lʋɩ wã, nebã na n kelga mam goamã sõma, bala yaa gom-noodo.",
+      "hyp": "Baa b sẽn lebo bokoodbã tɩ b yitãngã zug n leoã, nebã na n kɩdgã mam gomã sõma, bala yaa gob noodo."
+    },
+    {
+      "ref": "laafɩ beeme",
+      "hyp": "laafɩ beeme"
+    },
+    {
+      "ref": "A Aara yagensã yɩɩ neb kobs-yopoe la pis-yopoe la a nu.",
+      "hyp": "A Aarã yagensã yɩɩ neb kobe so-pɩlã pis-yopɩlã a no."
+    },
+    {
+      "ref": "paabo",
+      "hyp": "paabo"
+    }
+  ]
+}
