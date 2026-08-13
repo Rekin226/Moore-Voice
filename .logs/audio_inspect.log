@@ -1,0 +1,88 @@
+Repo card metadata block was not found. Setting CardData to empty.
+Repo card metadata block was not found. Setting CardData to empty.
+Repo card metadata block was not found. Setting CardData to empty.
+
+========================================================================
+hfdjobii/tts-moore-femme
+========================================================================
+  hub: dl=112  ♥0  size=0.0 MB  files=10682  top_exts=[('wav', 10680), ('gitattributes', 1), ('csv', 1)]
+  cfg=default  splits=['train']
+    split=train: load error ImportError: To support encoding audio data, please install 'torchcodec'.
+
+========================================================================
+hfdjobii/tts-moore-homme
+========================================================================
+  hub: dl=112  ♥0  size=0.0 MB  files=940  top_exts=[('wav', 938), ('gitattributes', 1), ('csv', 1)]
+  cfg=default  splits=['train']
+    split=train: load error ImportError: To support encoding audio data, please install 'torchcodec'.
+
+========================================================================
+hfdjobii/tts-moore-cluster-0
+========================================================================
+  hub: dl=11  ♥0  size=0.0 MB  files=2121  top_exts=[('wav', 2118), ('gitattributes', 1), ('csv', 1), ('jsonl', 1)]
+  cfg=default  split error: SplitsNotFoundError: The split names could not be parsed from the dataset config.
+
+========================================================================
+hfdjobii/tts-moore-cluster-1
+========================================================================
+  hub: dl=12  ♥0  size=0.0 MB  files=4513  top_exts=[('wav', 4510), ('gitattributes', 1), ('csv', 1), ('jsonl', 1)]
+  cfg=default  split error: SplitsNotFoundError: The split names could not be parsed from the dataset config.
+
+========================================================================
+hfdjobii/tts-moore-cluster-2
+========================================================================
+  hub: dl=12  ♥0  size=0.0 MB  files=763  top_exts=[('wav', 760), ('gitattributes', 1), ('csv', 1), ('jsonl', 1)]
+  cfg=default  split error: SplitsNotFoundError: The split names could not be parsed from the dataset config.
+
+========================================================================
+hfdjobii/tts-moore-cluster-3
+========================================================================
+  hub: dl=11  ♥0  size=0.0 MB  files=906  top_exts=[('wav', 903), ('gitattributes', 1), ('csv', 1), ('jsonl', 1)]
+  cfg=default  split error: SplitsNotFoundError: The split names could not be parsed from the dataset config.
+
+========================================================================
+hfdjobii/tts-moore-cluster-4
+========================================================================
+  hub: dl=12  ♥0  size=0.0 MB  files=3335  top_exts=[('wav', 3332), ('gitattributes', 1), ('csv', 1), ('jsonl', 1)]
+  cfg=default  split error: SplitsNotFoundError: The split names could not be parsed from the dataset config.
+
+========================================================================
+CITADEL-BF-Center/moore_audio_data
+========================================================================
+  hub: dl=119  ♥1  size=0.0 MB  files=75  top_exts=[('parquet', 73), ('gitattributes', 1), ('md', 1)]
+  ! configs error: DatasetNotFoundError: Dataset 'CITADEL-BF-Center/moore_audio_data' is a gated dataset on the Hub. Visit the dataset page at https://huggingfac
+
+========================================================================
+Minervus00/moore_audio_data
+========================================================================
+  hub: dl=166  ♥1  size=0.0 MB  files=75  top_exts=[('parquet', 73), ('gitattributes', 1), ('md', 1)]
+  cfg=default  splits=['train']
+    split=train: load error ImportError: To support decoding audio data, please install 'torchcodec'.
+
+========================================================================
+louisbertson/moore-audio-standardized
+========================================================================
+  hub: dl=29  ♥1  size=0.0 MB  files=75  top_exts=[('wav', 67), ('jsonl', 4), ('json', 2), ('gitattributes', 1), ('md', 1)]
+  cfg=default  splits=['train', 'validation', 'test']
+    split=train  cols=['audio_id', 'audio_path', 'duration_seconds', 'num_samples', 'speaker_id', 'transcript', 'split', 'source_path', 'audio', 'audio_relpath', 'source_relpath', 'sample_rate_hz', 'channels', 'bits_per_sample', 'task', 'hub_audio_path']
+      [audio_id] str(len=44): 'A Kientega B Samuèl kaalma BP ( 27-08 soir )'
+      [audio_path] str(len=97): '/root/moore/conformer/data/standardized/A_Kientega_B_Samu_l_kaalma_BP_27-08_soir_5b318c3564b9.wav'
+      [duration_seconds] float: 252.96075
+      [num_samples] int: 4047372
+      [speaker_id] NoneType: None
+      [transcript] NoneType: None
+      [split] str(len=5): 'train'
+      [source_path] str(len=97): '/root/moore/conformer/data/standardized/A_Kientega_B_Samu_l_kaalma_BP_27-08_soir_5b318c3564b9.wav'
+
+========================================================================
+goaicorp/moore-speech-bible
+========================================================================
+  hub: dl=12  ♥1  size=0.0 MB  files=44  top_exts=[('parquet', 42), ('gitattributes', 1), ('md', 1)]
+  ! configs error: DatasetNotFoundError: Dataset 'goaicorp/moore-speech-bible' is a gated dataset on the Hub. Visit the dataset page at https://huggingface.co/da
+Fatal Python error: PyGILState_Release: thread state 0x701be01debb0 must be current when releasing
+Python runtime state: finalizing (tstate=0x0000000000ba6748)
+
+Thread 0x0000701c487c2080 (most recent call first):
+  <no Python frame>
+
+Extension modules: numpy._core._multiarray_umath, numpy.linalg._umath_linalg, pyarrow.lib, numpy.random._common, numpy.random.bit_generator, numpy.random._bounded_integers, numpy.random._pcg64, numpy.random._generator, numpy.random._mt19937, numpy.random._philox, numpy.random._sfc64, numpy.random.mtrand, _cyutility, pandas._libs._cyutility, pandas._libs.tslibs.ccalendar, pandas._libs.tslibs.np_datetime, pandas._libs.tslibs.dtypes, pandas._libs.tslibs.base, pandas._libs.tslibs.nattype, pandas._libs.tslibs.timezones, pandas._libs.properties, pandas._libs.tslibs.fields, pandas._libs.tslibs.timedeltas, pandas._libs.tslibs.tzconversion, pandas._libs.tslibs.timestamps, pandas._libs.tslibs.offsets, pandas._libs.tslibs.strptime, pandas._libs.tslibs.parsing, pandas._libs.tslibs.conversion, pandas._libs.tslibs.period, pandas._libs.tslibs.vectorized, pandas._libs.ops_dispatch, pandas._libs.missing, pandas._libs.hashtable, pandas._libs.algos, pandas._libs.interval, pandas._libs.lib, pyarrow._compute, pandas._libs.ops, pandas._libs.hashing, pandas._libs.arrays, pandas._libs.tslib, pandas._libs.sparse, pandas._libs.internals, pandas._libs.indexing, pandas._libs.index, pandas._libs.writers, pandas._libs.join, pandas._libs.window.aggregations, pandas._libs.window.indexers, pandas._libs.reshape, pandas._libs.groupby, pandas._libs.json, pandas._libs.parsers, pandas._libs.testing, pyarrow._acero, pyarrow._fs, pyarrow._csv, pyarrow._json, pyarrow._substrait, pyarrow._dataset, pyarrow._dataset_orc, pyarrow._parquet, pyarrow._azurefs, pyarrow._hdfs, pyarrow._gcsfs, pyarrow._s3fs, pyarrow._parquet_encryption, pyarrow._dataset_parquet_encryption, pyarrow._dataset_parquet, yaml._yaml, charset_normalizer.md, charset_normalizer.cd, multidict._multidict, yarl._quoting_c, propcache._helpers_c, aiohttp._http_writer, aiohttp._http_parser, aiohttp._websocket.mask, aiohttp._websocket.reader_c, frozenlist._frozenlist, xxhash._xxhash (total: 82)

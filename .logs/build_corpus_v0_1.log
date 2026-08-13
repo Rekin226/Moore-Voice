@@ -1,0 +1,17 @@
+[load] michsethowusu/english-moore_sentence-pairs_mt560
+       kept 182,505 / 186,434
+[load] hfdjobii/mistral-moore-dataset-v2
+       kept 14,847 / 129,430
+[load] madoss/nllb-mos-raw (laser >= 1.15)
+       kept 7,213
+[load] translatewiki en-mos kept 3,411 / 5,952
+[load] translatewiki fr-mos kept 4,070 / 5,894
+[dedup] 212,046 → 205,706 pairs
+[load] FLORES-200 devtest: 2,024 eval pairs
+[decontaminate] dropped 435 pairs overlapping FLORES
+{
+  "train": 390016,
+  "dev": 20526,
+  "eval": 4048
+}
+[write] /home/rekin226/Desktop/code_space/Mooré-Voice/data/processed/moore_parallel_v0_1.parquet

@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v4
+      - name: Ruff
+        run: uv run --python 3.12 --with ruff ruff check moore_voice tests scripts
+      - name: Pytest
+        run: uv run --python 3.12 --with pytest --with pandas --with pyarrow -m pytest -q
