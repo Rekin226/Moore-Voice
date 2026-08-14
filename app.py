@@ -143,4 +143,10 @@ with gr.Blocks(title="Mooré-Voice") as demo:
     )
 
 if __name__ == "__main__":
-    demo.launch()
+    # MOORE_SHARE=1 → free public *.gradio.live link (valid ~1 week, anyone
+    # with the URL can use it while this process runs).
+    # MOORE_LAN=1   → serve on the local network at http://<this-ip>:7860.
+    demo.launch(
+        share=os.environ.get("MOORE_SHARE", "") == "1",
+        server_name="0.0.0.0" if os.environ.get("MOORE_LAN", "") == "1" else "127.0.0.1",
+    )

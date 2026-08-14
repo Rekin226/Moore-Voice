@@ -2,6 +2,8 @@
 
 **Open translation and speech recognition for Mooré (Mòoré / Mossi, ISO 639-3 `mos`)** — the language of the Mossi people of Burkina Faso, spoken by ~8 million people across Burkina Faso, Côte d'Ivoire, Togo, Ghana, and Mali.
 
+**Try it:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rekin226/Moore-Voice/blob/main/notebooks/moore_voice_demo.ipynb) — free GPU, prints a public demo link anyone can open on a phone.
+
 Built on Meta NLLB-200, Meta Omnilingual ASR, and NVIDIA NeMo. Corpus contributions upstream to Common Voice, Lanfrica, and NeMo.
 
 _Repo name on GitHub is `Moore-Voice` (no accent — GitHub restriction). Human name is `Mooré-Voice`._

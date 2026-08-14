@@ -1,0 +1,5 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+* Running on local URL:  http://127.0.0.1:7860
+* To create a public link, set `share=True` in `launch()`.
+Loading weights:   0%|          | 0/1016 [00:00<?, ?it/s]Loading weights:  32%|███▏      | 328/1016 [00:00<00:00, 3253.46it/s]Loading weights:  64%|██████▍   | 654/1016 [00:00<00:00, 2415.49it/s]Loading weights: 100%|██████████| 1016/1016 [00:00<00:00, 2457.86it/s]Loading weights: 100%|██████████| 1016/1016 [00:00<00:00, 2509.39it/s]
+[transformers] Both `max_new_tokens` (=192) and `max_length`(=200) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)

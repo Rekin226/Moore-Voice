@@ -25,3 +25,6 @@ checkpoints/
 # OS
 .DS_Store
 Thumbs.db
+
+# Notebooks: allow the Colab demo
+!notebooks/*.ipynb
