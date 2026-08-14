@@ -45,10 +45,58 @@ def load_ratings(rater: str) -> dict[int, dict]:
     return {r["id"]: r for r in map(json.loads, open(p))}
 
 
-def main() -> None:
-    st.set_page_config(page_title="Mooré-Voice accuracy test", page_icon="🗣️")
-    st.title("🗣️ Mooré-Voice — blind accuracy test")
+@st.cache_resource(show_spinner="Loading the translation model (first time only, ~2 min)…")
+def load_translator():
+    import torch
+    from peft import PeftModel
+    from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
+    base = "facebook/nllb-200-3.3B"
+    adapter = Path(__file__).parent / "models" / "nllb-3.3B-moore-lora-v0"
+    tok = AutoTokenizer.from_pretrained(base)
+    model = AutoModelForSeq2SeqLM.from_pretrained(base, dtype=torch.bfloat16)
+    model = PeftModel.from_pretrained(model, str(adapter)).merge_and_unload()
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    return tok, model.to(device).eval(), device
+
+
+def live_tab() -> None:
+    import torch
+
+    codes = {"Français": "fra_Latn", "Mooré": "mos_Latn", "English": "eng_Latn"}
+    c1, c2 = st.columns(2)
+    src = c1.selectbox("De / From", list(codes), index=0)
+    tgt = c2.selectbox("Vers / To", list(codes), index=1)
+    text = st.text_area("Texte / Text", height=120,
+                        placeholder="Le marché ouvre demain matin.")
+    if st.button("Traduire / Translate", type="primary") and text.strip():
+        if src == tgt:
+            st.warning("Choisissez deux langues différentes.")
+            return
+        tok, model, device = load_translator()
+        tok.src_lang = codes[src]
+        enc = tok(text.strip(), return_tensors="pt", truncation=True,
+                  max_length=256).to(device)
+        with torch.inference_mode():
+            out = model.generate(
+                **enc, forced_bos_token_id=tok.convert_tokens_to_ids(codes[tgt]),
+                num_beams=5, max_new_tokens=192)
+        st.success(tok.batch_decode(out, skip_special_tokens=True)[0])
+        st.caption("NLLB-200-3.3B + Mooré LoRA v0 (local)")
+
+
+def main() -> None:
+    st.set_page_config(page_title="Mooré-Voice", page_icon="🗣️")
+    st.title("🗣️ Mooré-Voice")
+
+    tab_live, tab_test = st.tabs(["✍️ Traduire (live)", "⚖️ Test A/B (aveugle)"])
+    with tab_live:
+        live_tab()
+    with tab_test:
+        blind_test_tab()
+
+
+def blind_test_tab() -> None:
     if not PACK.exists():
         st.error("Missing data/eval_pack/eval_pack.jsonl — run "
                  "`python scripts/generate_eval_pack.py` first.")
