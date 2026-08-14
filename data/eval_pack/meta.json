@@ -1,0 +1,7 @@
+{
+  "generated_at": "2026-08-14T08:45:34+00:00",
+  "model": "facebook/nllb-200-3.3B",
+  "adapter": "nllb-3.3B-moore-lora-v0",
+  "items": 40,
+  "seed": 42
+}
