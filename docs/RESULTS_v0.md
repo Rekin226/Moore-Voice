@@ -1,6 +1,6 @@
 # Mooré-Voice v0 results
 
-_Generated 2026-08-31T14:41:31+00:00 by `scripts/make_results_doc.py`. Do not edit the tables by hand._
+_Generated 2026-08-31T17:43:54+00:00 by `scripts/make_results_doc.py`. Do not edit the tables by hand._
 
 ## Translation — FLORES-200 devtest (1,012 sentences/direction)
 
@@ -62,6 +62,7 @@ Raters: Rachid (40). Items judged: 40.
 |---|---:|---:|---:|
 | MMS-1b-all (mos adapter, zero-shot) | 0.3111 | 0.086 | 564 |
 | Whisper-small fine-tuned v0 | 0.3408 | 0.1136 | 564 |
+| MMS-1b-all mos adapter fine-tuned v0 | 0.1679 | 0.043 | 564 |
 
 ## Samples (fine-tuned)
 

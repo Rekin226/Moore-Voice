@@ -26,6 +26,7 @@ MT_EVALS = [
 ASR_EVALS = [
     ("MMS-1b-all (mos adapter, zero-shot)", "asr_mms_base.json"),
     ("Whisper-small fine-tuned v0", "asr_whisper_ft.json"),
+    ("MMS-1b-all mos adapter fine-tuned v0", "asr_mms_ft.json"),
 ]
 DIRECTIONS = ["mos_Latn→fra_Latn", "mos_Latn→eng_Latn",
               "fra_Latn→mos_Latn", "eng_Latn→mos_Latn"]

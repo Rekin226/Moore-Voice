@@ -1,0 +1,30 @@
+{
+  "model": "models/mms-1b-mos-shakedown(fine-tuned)",
+  "split": "test",
+  "n": 60,
+  "wer": 0.2576,
+  "cer": 0.0664,
+  "generated_at": "2026-08-31T09:50:55+00:00",
+  "samples": [
+    {
+      "ref": "Bɩ Sẽn-Ka-Saab ning-y bark la b gũ-yã!",
+      "hyp": "bɩ sẽn ka saab ning y bark la b gũyã"
+    },
+    {
+      "ref": "Baa b sẽn lob b bʋ-kaoodbã tɩ b yi tãngã zug n lʋɩ wã, nebã na n kelga mam goamã sõma, bala yaa gom-noodo.",
+      "hyp": "baa b sõndb b bʋ-kaoodba tɩ b yi tãngã zug n lʋɩ wã nebã na n kerga mam goama sõmã bala yaa gob-noodo"
+    },
+    {
+      "ref": "laafɩ beeme",
+      "hyp": "laafi beeme"
+    },
+    {
+      "ref": "A Aara yagensã yɩɩ neb kobs-yopoe la pis-yopoe la a nu.",
+      "hyp": "a aarã yagensa yɩɩ neb kobe-sopoela a pi-sopoela a no"
+    },
+    {
+      "ref": "paabo",
+      "hyp": "paabo"
+    }
+  ]
+}

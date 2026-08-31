@@ -1,0 +1,16 @@
+[eval] 564 utterances from split=test
+Loading weights:   0%|          | 0/1096 [00:00<?, ?it/s]Loading weights: 100%|██████████| 1096/1096 [00:00<00:00, 17911.32it/s]
+  0/564
+  50/564
+  100/564
+  150/564
+  200/564
+  250/564
+  300/564
+  350/564
+  400/564
+  450/564
+  500/564
+  550/564
+[score] models/mms-1b-mos-v0(fine-tuned)  WER=0.168  CER=0.043
+[write] .logs/asr_mms_ft.json

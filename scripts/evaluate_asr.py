@@ -3,6 +3,7 @@
 Supports:
   - fine-tuned or stock Whisper: --whisper <model-or-dir> [--language yo]
   - Meta MMS-1b-all with its mos adapter (zero-shot baseline): --mms
+  - a fine-tuned MMS checkpoint from scripts/finetune_mms.py: --mms-dir <dir>
 
 Run:
     uv run ... python scripts/evaluate_asr.py --mms --out .logs/asr_mms_base.json
@@ -28,6 +29,8 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--whisper", default=None)
     p.add_argument("--language", default="yo")
     p.add_argument("--mms", action="store_true")
+    p.add_argument("--mms-dir", default=None,
+                   help="local fine-tuned MMS checkpoint directory")
     p.add_argument("--manifest", default=str(AUDIO_DIR / "manifest.jsonl"))
     p.add_argument("--split", default="test")
     p.add_argument("--limit", type=int, default=0)
@@ -45,7 +48,8 @@ def normalize(s: str) -> str:
 
 def main() -> None:
     args = parse_args()
-    assert args.whisper or args.mms, "pick --whisper <model> or --mms"
+    assert args.whisper or args.mms or args.mms_dir, \
+        "pick --whisper <model>, --mms, or --mms-dir <dir>"
 
     import jiwer
     import soundfile as sf
@@ -61,14 +65,19 @@ def main() -> None:
     hyps: list[str] = []
     refs = [r["text"] for r in rows]
 
-    if args.mms:
+    if args.mms or args.mms_dir:
         from transformers import AutoProcessor, Wav2Vec2ForCTC
-        model_id = "facebook/mms-1b-all"
+        model_id = args.mms_dir or "facebook/mms-1b-all"
         processor = AutoProcessor.from_pretrained(model_id)
+        try:
+            processor.tokenizer.set_target_lang("mos")
+        except (ValueError, KeyError):
+            pass  # a fine-tuned checkpoint already carries the mos vocab
         model = Wav2Vec2ForCTC.from_pretrained(model_id).to(device).eval()
-        processor.tokenizer.set_target_lang("mos")
-        model.load_adapter("mos")
-        label = f"{model_id}(mos adapter)"
+        if not args.mms_dir:
+            model.load_adapter("mos")
+        label = (f"{model_id}(fine-tuned)" if args.mms_dir
+                 else f"{model_id}(mos adapter)")
         for i, r in enumerate(rows):
             audio, sr = sf.read(AUDIO_DIR / r["path"], dtype="float32")
             inputs = processor(audio, sampling_rate=sr, return_tensors="pt").to(device)
