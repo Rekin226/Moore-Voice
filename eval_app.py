@@ -61,8 +61,6 @@ def load_translator():
 
 
 def live_tab() -> None:
-    import torch
-
     codes = {"Français": "fra_Latn", "Mooré": "mos_Latn", "English": "eng_Latn"}
     c1, c2 = st.columns(2)
     src = c1.selectbox("De / From", list(codes), index=0)
@@ -73,6 +71,8 @@ def live_tab() -> None:
         if src == tgt:
             st.warning("Choisissez deux langues différentes.")
             return
+        import torch
+
         tok, model, device = load_translator()
         tok.src_lang = codes[src]
         enc = tok(text.strip(), return_tensors="pt", truncation=True,

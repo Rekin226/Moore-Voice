@@ -1,6 +1,6 @@
 # Mooré-Voice v0 results
 
-_Generated 2026-08-13T09:06:04+00:00 by `scripts/make_results_doc.py`. Do not edit the tables by hand._
+_Generated 2026-08-31T14:41:31+00:00 by `scripts/make_results_doc.py`. Do not edit the tables by hand._
 
 ## Translation — FLORES-200 devtest (1,012 sentences/direction)
 
@@ -23,6 +23,38 @@ chrF++ is the primary metric for Mooré; BLEU shown for comparability.
 | NLLB-600M + LoRA v0 | 8.32 | 8.92 | 3.1 | 3.19 |
 | NLLB-3.3B zero-shot | 9.14 | 10.77 | 3.18 | 3.72 |
 | NLLB-3.3B + LoRA v0 | 11.24 | 11.86 | 3.5 | 3.88 |
+
+## Blind A/B — native-speaker judgments
+
+Fine-tuned (NLLB-3.3B + LoRA v0) vs zero-shot NLLB-3.3B, unlabelled and in random order. Collected with `eval_app.py`; raw judgments in `data/eval_pack/`.
+
+Raters: Rachid (40). Items judged: 40.
+
+| Outcome | Count |
+|---|---:|
+| Fine-tuned better | 11 |
+| Zero-shot better | 11 |
+| Equally good | 6 |
+| Both bad | 12 |
+
+**Fine-tuned win rate on decided pairs: 50%** (11/22, one-sided sign test p = 0.58).
+
+| Direction | Fine-tuned | Zero-shot | Tie | Both bad |
+|---|---:|---:|---:|---:|
+| fra→mos | 3 | 4 | 1 | 2 |
+| eng→mos | 2 | 4 | 2 | 2 |
+| mos→fra | 1 | 3 | 2 | 4 |
+| mos→eng | 5 | 0 | 1 | 4 |
+
+### Reading these numbers
+
+- The automatic metrics above and this human evaluation **disagree**. NLLB-3.3B + LoRA gains +2.10 BLEU / +2.80 chrF++ on mos→fra, but a native speaker cannot tell the two systems apart overall (win rate 50%, p = 0.58). BLEU is a proxy; on this evidence it is not tracking perceived quality for Mooré.
+- **12 of 40 pairs were judged "both bad"** (30%) — on those items neither system produced a usable translation, which no win-rate can capture.
+- Only **mos→eng** shows a clear win (5–0, never rated worse). The other three directions slightly favour the zero-shot model — including mos→fra, where the BLEU gain is largest. The direction with the best automatic score is not the one the rater preferred.
+- Into-Mooré remains the weak axis, consistent with the chrF++ table above (eng→mos is −0.36 at 3.3B).
+
+**Caveat:** single rater, 40 items, 22 decided pairs. That is enough to say no overall improvement is detectable, and not enough to rank the directions confidently — the per-direction rows rest on ~10 judgments each.
+
 
 ## Speech recognition — held-out test split
 
