@@ -8,22 +8,36 @@ Gradio app, deployable locally or as a Hugging Face Space:
 Env overrides:
     MOORE_MT_BASE      base NLLB model    (default facebook/nllb-200-distilled-600M)
     MOORE_MT_ADAPTER   LoRA adapter dir/repo (default Rekin226/nllb-600M-moore-lora)
+    MOORE_ASR_ENGINE   mms | whisper      (default mms — less than half the WER)
+    MOORE_MMS_MODEL    MMS dir/repo       (default: local fine-tune, else stock)
     MOORE_ASR_MODEL    Whisper dir/repo   (default Rekin226/whisper-small-moore)
 """
 
 from __future__ import annotations
 
 import os
+from pathlib import Path
 
 import gradio as gr
 import torch
 
+REPO_ROOT = Path(__file__).resolve().parent
+
 MT_BASE = os.environ.get("MOORE_MT_BASE", "facebook/nllb-200-distilled-600M")
 MT_ADAPTER = os.environ.get("MOORE_MT_ADAPTER", "Rekin226/nllb-600M-moore-lora-v0")
-ASR_ENGINE = os.environ.get("MOORE_ASR_ENGINE", "whisper")  # whisper | mms
+# MMS by default: WER 0.168 fine-tuned / 0.311 stock, vs 0.341 for whisper-small.
+ASR_ENGINE = os.environ.get("MOORE_ASR_ENGINE", "mms")  # whisper | mms
 ASR_MODEL = os.environ.get("MOORE_ASR_MODEL", "Rekin226/whisper-small-moore-v0")
 ASR_LANG = os.environ.get("MOORE_ASR_LANG", "yo")  # anchor token used in training
-MMS_MODEL = os.environ.get("MOORE_MMS_MODEL", "facebook/mms-1b-all")
+
+
+def _default_mms() -> str:
+    """Prefer our fine-tuned adapter; fall back to stock MMS if it isn't here."""
+    local = REPO_ROOT / "models" / "mms-1b-mos-v0"
+    return str(local) if local.exists() else "facebook/mms-1b-all"
+
+
+MMS_MODEL = os.environ.get("MOORE_MMS_MODEL", _default_mms())
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 DTYPE = torch.bfloat16 if DEVICE == "cuda" else torch.float32
@@ -52,13 +66,19 @@ def get_mt():
 def get_asr():
     if not _asr:
         if ASR_ENGINE == "mms":
-            # Meta MMS-1b-all with its mos adapter — currently the strongest
-            # zero-shot Mooré ASR (WER 0.31 vs 0.34 for our whisper-small v0).
+            # MMS-1b-all. Our fine-tuned mos adapter scores WER 0.168 on the
+            # held-out test split; stock zero-shot is 0.311, whisper-small 0.341.
             from transformers import AutoProcessor, Wav2Vec2ForCTC
             proc = AutoProcessor.from_pretrained(MMS_MODEL)
             model = Wav2Vec2ForCTC.from_pretrained(MMS_MODEL)
-            proc.tokenizer.set_target_lang("mos")
-            model.load_adapter("mos")
+            # Stock mms-1b-all ships every language and needs mos selected; a
+            # fine-tuned checkpoint already carries the mos vocab and has no
+            # adapter to load. Same guard as scripts/evaluate_asr.py --mms-dir.
+            try:
+                proc.tokenizer.set_target_lang("mos")
+                model.load_adapter("mos")
+            except (ValueError, KeyError, OSError):
+                pass
             _asr["proc"], _asr["model"] = proc, model.to(DEVICE).eval()
         else:
             from transformers import WhisperForConditionalGeneration, WhisperProcessor

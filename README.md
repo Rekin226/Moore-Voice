@@ -10,7 +10,9 @@ _Repo name on GitHub is `Moore-Voice` (no accent — GitHub restriction). Human 
 
 ---
 
-## Status (2026-08)
+## Status (2026-09)
+
+**Headline, honestly stated:** ASR works — the fine-tuned MMS-1b `mos` adapter reaches **WER 16.8%**, less than half the error of anything else we tried. **Translation does not yet.** A native speaker in a blind A/B test could not tell the fine-tuned NLLB adapter from the zero-shot base model (50% win rate, 22 decided pairs), and rated 30% of all outputs "both bad" regardless of model. The BLEU gains are real and reproducible; they are not perceptible. Details in [`docs/RESULTS_v0.md`](docs/RESULTS_v0.md).
 
 | Track | Status |
 |---|---|
@@ -18,14 +20,16 @@ _Repo name on GitHub is `Moore-Voice` (no accent — GitHub restriction). Human 
 | Curated parallel corpus **v0.1** | ✅ **205,271 clean pairs / 414,590 direction-rows** — detokenised, LID-gated on every Mooré side, fragment-filtered, pair-level splits, all 4 directions (`data/processed/`, rebuild with `scripts/build_corpus.py`) |
 | FLORES-200 eval split | ✅ **1,012 devtest sentences × 4 directions**, fetched from Meta's public mirror (no gating), train/dev decontaminated against it on both sides |
 | NLLB LoRA fine-tune | ✅ pipeline validated (shakedown) → full 600M + 3.3B runs on local RTX 4070; adapters in `models/` |
-| Automatic evaluation (BLEU / chrF++) | ✅ `scripts/evaluate.py`, before/after in `docs/RESULTS_v0.md` |
+| Automatic evaluation (BLEU / chrF++) | ✅ `scripts/evaluate.py`, before/after in `docs/RESULTS_v0.md` — best gain mos→fra +2.10 BLEU |
+| **Human evaluation (blind A/B)** | ✅ **40 native-speaker judgments — and they contradict BLEU.** Fine-tune vs zero-shot is a coin flip (50%, 11/22 decided, p = 0.58); 30% of pairs "both bad"; only mos→eng is a clear win. `eval_app.py`, raw judgments in `data/eval_pack/` |
 | ASR corpus (~38k transcribed utterances) | ✅ `scripts/build_asr_corpus.py` → `data/audio/` (see `data/AUDIO_CORPORA.md`) |
-| ASR fine-tune (Whisper-small) | ✅ trained — WER 34.1% / CER 11.4% on held-out test; MMS-1b zero-shot baseline WER 31.1% (`docs/RESULTS_v0.md`) |
-| Published models | ✅ [`Rekin226/nllb-3.3B-moore-lora-v0`](https://huggingface.co/Rekin226/nllb-3.3B-moore-lora-v0) · [`Rekin226/nllb-600M-moore-lora-v0`](https://huggingface.co/Rekin226/nllb-600M-moore-lora-v0) · [`Rekin226/whisper-small-moore-v0`](https://huggingface.co/Rekin226/whisper-small-moore-v0) |
-| Demo app (translate + speech→text→translate) | ✅ `app.py` (Gradio, local or HF Space) |
+| ASR fine-tune (Whisper-small) | ✅ trained — WER 34.1% / CER 11.4% — **superseded, see below** |
+| **ASR fine-tune (MMS-1b `mos` adapter)** | ✅ **WER 16.8% / CER 4.3%** on the 564-utterance held-out test — 46% relative cut vs the 31.1% zero-shot MMS baseline. 2.2M trainable params, 3h12m on one RTX 4070 (`scripts/finetune_mms.py`) |
+| Published models | ✅ [`Rekin226/nllb-3.3B-moore-lora-v0`](https://huggingface.co/Rekin226/nllb-3.3B-moore-lora-v0) · [`Rekin226/nllb-600M-moore-lora-v0`](https://huggingface.co/Rekin226/nllb-600M-moore-lora-v0) · [`Rekin226/whisper-small-moore-v0`](https://huggingface.co/Rekin226/whisper-small-moore-v0) — ⏳ MMS adapter not yet pushed (`scripts/publish_hf.py`) |
+| Demo app (translate + speech→text→translate) | ✅ `app.py` (Gradio, local or HF Space) — now defaults to the fine-tuned MMS adapter when `models/mms-1b-mos-v0/` is present, else stock MMS. Override with `MOORE_ASR_ENGINE=whisper` or `MOORE_MMS_MODEL=...` |
 | Common Voice `mos` locale — 750 seed sentences | ✅ **762 French sentences** ready in `data/common_voice_seed/fr_seed_v0.txt` |
 | Mooré translations of the seed corpus | ⏳ awaiting native-speaker work → `mos_seed_v0.txt` — **the one step no machine can do** |
-| Native-speaker rating of model outputs | ⏳ rating sheet in `docs/RESULTS_v0.md` |
+| Register-balanced corpus rebuild | ⏳ **now the top priority for translation** — ~89% of the text is Bible-register, the likely cause of the A/B result |
 
 ## Why
 
@@ -45,10 +49,12 @@ Out of scope for v0: text-to-speech (Mooré TTS is a v1 target), other Voltaic l
 |---|---|
 | Translation baseline | Meta [NLLB-200](https://ai.meta.com/blog/nllb-200-high-quality-machine-translation/) (`mos_Latn`) |
 | Translation fine-tune | Hugging Face `transformers` + `peft` LoRA on NLLB-200-3.3B |
-| ASR baseline | Meta [Omnilingual ASR](https://ai.meta.com/blog/omnilingual-asr-advancing-automatic-speech-recognition/), NVIDIA [Parakeet-TDT](https://developer.nvidia.com/blog/pushing-the-boundaries-of-speech-recognition-with-nemo-parakeet-asr-models/) / [Canary-1B-v2](https://arxiv.org/pdf/2509.14128) |
-| ASR fine-tune | NVIDIA NeMo ASR + NeMo Speech Data Processor |
-| Evaluation | FLORES-200 devtest + native-speaker held-out set |
-| Compute | Colab T4 (free) → Colab A100 or Azure A100 for production runs |
+| ASR baseline | Meta [MMS-1b-all](https://huggingface.co/facebook/mms-1b-all) with its pretrained `mos` adapter (WER 31.1% zero-shot) |
+| ASR fine-tune | Hugging Face `transformers` — adapter-only fine-tune of MMS-1b (`scripts/finetune_mms.py`); Whisper-small also trained for comparison |
+| Evaluation | FLORES-200 devtest (BLEU/chrF++) + held-out ASR test split (WER/CER) + native-speaker blind A/B (`eval_app.py`) |
+| Compute | One local RTX 4070 (12 GB) — every run in `docs/RESULTS_v0.md` was trained on it |
+
+_Omnilingual ASR, Parakeet-TDT and NeMo were surveyed in Phase 0 (see References) but are not in the v0 pipeline; MMS-1b won the baseline comparison and is what v0 ships._
 
 ## Repo layout
 
@@ -97,9 +103,16 @@ uv run ... python scripts/evaluate.py --out .logs/eval_base.json                
 uv run ... python scripts/evaluate.py --adapter models/nllb-600M-moore-lora-v0 \
   --out .logs/eval_lora.json                                                    # fine-tuned
 
-# 4. ASR corpus + Whisper fine-tune
+# 4. ASR corpus + fine-tune. MMS is the v0 model (WER 16.8%); Whisper is kept
+#    for comparison only (WER 34.1%).
 uv run ... python scripts/build_asr_corpus.py
+uv run ... python scripts/finetune_mms.py --epochs 3 --output models/mms-1b-mos-v0
+uv run ... python scripts/evaluate_asr.py --mms-dir models/mms-1b-mos-v0 \
+  --out .logs/asr_mms_ft.json
 uv run ... python scripts/finetune_whisper.py --epochs 3 --output models/whisper-small-mos-v0
+
+# 4b. Blind A/B rating app (native-speaker eval of the translation adapters)
+uv run --python 3.12 --with streamlit ... streamlit run eval_app.py
 
 # 5. Demo (translation + speech-to-text)
 uv run --python 3.12 --with gradio --with 'transformers>=4.44' --with 'peft>=0.11' \
@@ -131,18 +144,21 @@ Unit tests: `uv run --python 3.12 --with pytest --with pandas --with pyarrow -m 
 - [x] LoRA fine-tune of NLLB-200-600M on the curated corpus, all 4 directions
 - [x] LoRA fine-tune of NLLB-200-3.3B (overnight run)
 - [x] BLEU/chrF++ before/after on FLORES devtest → `docs/RESULTS_v0.md`
-- [ ] Native-speaker rating of fine-tuned outputs (sheet in RESULTS_v0.md)
+- [x] Native-speaker blind A/B of fine-tuned vs zero-shot (40 judgments, `eval_app.py`)
+- [ ] **Act on the A/B result** — register-balanced corpus rebuild (`--max-per-source`), then retrain and re-run the A/B. Phase 2 is not done until a native speaker can tell the difference.
 
 ### Phase 3 — ASR ✅ (v0)
 - [x] Assemble 37,654-utterance / 85 h transcribed Mooré audio corpus (`data/AUDIO_CORPORA.md`)
 - [x] Fine-tune Whisper-small for Mooré speech→text (WER 34.1% test)
-- [x] MMS-1b-all `mos` zero-shot baseline (WER 31.1% — currently the stronger engine; `MOORE_ASR_ENGINE=mms` in the demo)
-- [ ] Fine-tune the MMS `mos` adapter on our corpus (expected to beat both)
+- [x] MMS-1b-all `mos` zero-shot baseline (WER 31.1%)
+- [x] **Fine-tune the MMS `mos` adapter on our corpus — WER 16.8% / CER 4.3%, the v0 ASR model**
 - [ ] Access to gated CITADEL-BF / goaicorp audio (~2× more data)
 
 ### Phase 4 — Release + Upstream
 - [x] Gradio demo app (translate + speech→text→translate)
-- [ ] Publish adapters + demo Space under `Rekin226/*`
+- [x] Publish NLLB adapters + Whisper ASR under `Rekin226/*`
+- [ ] Publish the fine-tuned MMS `mos` adapter (`scripts/publish_hf.py` is ready; 8.6 MB artefact)
+- [ ] Demo Space — blocked: Gradio Spaces now require an HF PRO subscription (402 on `create_repo`, 2026-08). Runs locally via `python app.py`.
 - [ ] Common Voice `mos` unlocked (after seed translation)
 - [ ] Publish preprint (EMNLP or LREC target)
 
