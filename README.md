@@ -4,7 +4,7 @@
 
 **Try it:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rekin226/Moore-Voice/blob/main/notebooks/moore_voice_demo.ipynb) — free GPU, prints a public demo link anyone can open on a phone.
 
-Built on Meta NLLB-200, Meta Omnilingual ASR, and NVIDIA NeMo. Corpus contributions upstream to Common Voice, Lanfrica, and NeMo.
+Built on Meta NLLB-200 (translation) and Meta MMS-1b (speech recognition). Corpus contributions upstream to Common Voice, Lanfrica, and NeMo.
 
 _Repo name on GitHub is `Moore-Voice` (no accent — GitHub restriction). Human name is `Mooré-Voice`._
 
@@ -38,7 +38,7 @@ The models exist. **NLLB-200 already supports Mooré as `mos_Latn`**, and Meta's
 ## Scope (v0)
 
 - **Translation:** French ↔ Mooré, English ↔ Mooré. Fine-tune NLLB-200 on curated Mooré parallel data.
-- **Transcription (ASR):** Mooré → text. Fine-tune NVIDIA NeMo Parakeet-TDT and Meta Omnilingual ASR against a Mooré audio corpus.
+- **Transcription (ASR):** Mooré → text. Fine-tune Meta MMS-1b against a Mooré audio corpus (Omnilingual ASR and Parakeet-TDT were surveyed, not shipped).
 - **Corpus:** Community-collected + Bible/JW300 + AFRIDOC-MT + government / NGO sources. All redistributable licenses only (see `data/CORPORA.md` for policy).
 
 Out of scope for v0: text-to-speech (Mooré TTS is a v1 target), other Voltaic languages (Fulfulde, Dagbani, Dyula).
